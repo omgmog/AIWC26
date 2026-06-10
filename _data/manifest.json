@@ -1,6 +1,7 @@
 {
-  "note": "Add one filename per model, relative to data/predictions/. Display order follows this list.",
+  "note": "Add one filename per model, relative to _data/predictions/. Display order follows this list.",
   "predictions": [
+    "ranking-bot.json",
     "claude-fable-5.json",
     "claude-sonnet-4-6.json",
     "chatgpt-gpt-5.5.json",

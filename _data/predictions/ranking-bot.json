@@ -1,0 +1,512 @@
+{
+  "model": "Ranking Bot",
+  "provider": "FIFA rankings + one rule",
+  "generated": "2026-06-10",
+  "method_notes": "Deterministic baseline. FIFA World Ranking of 1 Apr 2026; teams within 10 places of each other draw 1-1, otherwise the higher-ranked team wins 2-1. No model, no judgement.",
+  "predictions": [
+    {
+      "fixture_id": "A1",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "MEX ranked 15, RSA ranked 60, gap 45: MEX win."
+    },
+    {
+      "fixture_id": "A2",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "KOR ranked 25, CZE ranked 41, gap 16: KOR win."
+    },
+    {
+      "fixture_id": "A3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "MEX ranked 15, KOR ranked 25, gap 10: MEX win."
+    },
+    {
+      "fixture_id": "A4",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "CZE ranked 41, RSA ranked 60, gap 19: CZE win."
+    },
+    {
+      "fixture_id": "A5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "CZE ranked 41, MEX ranked 15, gap 26: MEX win."
+    },
+    {
+      "fixture_id": "A6",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "RSA ranked 60, KOR ranked 25, gap 35: KOR win."
+    },
+    {
+      "fixture_id": "B1",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "CAN ranked 30, SUI ranked 19, gap 11: SUI win."
+    },
+    {
+      "fixture_id": "B2",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "QAT ranked 55, BIH ranked 65, gap 10: QAT win."
+    },
+    {
+      "fixture_id": "B3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "CAN ranked 30, QAT ranked 55, gap 25: CAN win."
+    },
+    {
+      "fixture_id": "B4",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "BIH ranked 65, SUI ranked 19, gap 46: SUI win."
+    },
+    {
+      "fixture_id": "B5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "BIH ranked 65, CAN ranked 30, gap 35: CAN win."
+    },
+    {
+      "fixture_id": "B6",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "SUI ranked 19, QAT ranked 55, gap 36: SUI win."
+    },
+    {
+      "fixture_id": "C1",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "BRA ranked 6, MAR ranked 8, gap 2: draw."
+    },
+    {
+      "fixture_id": "C2",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "HAI ranked 83, SCO ranked 43, gap 40: SCO win."
+    },
+    {
+      "fixture_id": "C3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "BRA ranked 6, HAI ranked 83, gap 77: BRA win."
+    },
+    {
+      "fixture_id": "C4",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "SCO ranked 43, MAR ranked 8, gap 35: MAR win."
+    },
+    {
+      "fixture_id": "C5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "SCO ranked 43, BRA ranked 6, gap 37: BRA win."
+    },
+    {
+      "fixture_id": "C6",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "MAR ranked 8, HAI ranked 83, gap 75: MAR win."
+    },
+    {
+      "fixture_id": "D1",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "USA ranked 16, PAR ranked 40, gap 24: USA win."
+    },
+    {
+      "fixture_id": "D2",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "AUS ranked 27, TUR ranked 22, gap 5: draw."
+    },
+    {
+      "fixture_id": "D3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "USA ranked 16, AUS ranked 27, gap 11: USA win."
+    },
+    {
+      "fixture_id": "D4",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "TUR ranked 22, PAR ranked 40, gap 18: TUR win."
+    },
+    {
+      "fixture_id": "D5",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "TUR ranked 22, USA ranked 16, gap 6: draw."
+    },
+    {
+      "fixture_id": "D6",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "PAR ranked 40, AUS ranked 27, gap 13: AUS win."
+    },
+    {
+      "fixture_id": "E1",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "GER ranked 10, CUW ranked 82, gap 72: GER win."
+    },
+    {
+      "fixture_id": "E2",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "CIV ranked 34, ECU ranked 23, gap 11: ECU win."
+    },
+    {
+      "fixture_id": "E3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "GER ranked 10, CIV ranked 34, gap 24: GER win."
+    },
+    {
+      "fixture_id": "E4",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ECU ranked 23, CUW ranked 82, gap 59: ECU win."
+    },
+    {
+      "fixture_id": "E5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "ECU ranked 23, GER ranked 10, gap 13: GER win."
+    },
+    {
+      "fixture_id": "E6",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "CUW ranked 82, CIV ranked 34, gap 48: CIV win."
+    },
+    {
+      "fixture_id": "F1",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "NED ranked 7, JPN ranked 18, gap 11: NED win."
+    },
+    {
+      "fixture_id": "F2",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "SWE ranked 38, TUN ranked 44, gap 6: draw."
+    },
+    {
+      "fixture_id": "F3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "NED ranked 7, SWE ranked 38, gap 31: NED win."
+    },
+    {
+      "fixture_id": "F4",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "TUN ranked 44, JPN ranked 18, gap 26: JPN win."
+    },
+    {
+      "fixture_id": "F5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "TUN ranked 44, NED ranked 7, gap 37: NED win."
+    },
+    {
+      "fixture_id": "F6",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "JPN ranked 18, SWE ranked 38, gap 20: JPN win."
+    },
+    {
+      "fixture_id": "G1",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "BEL ranked 9, EGY ranked 29, gap 20: BEL win."
+    },
+    {
+      "fixture_id": "G2",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "IRN ranked 21, NZL ranked 85, gap 64: IRN win."
+    },
+    {
+      "fixture_id": "G3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "BEL ranked 9, IRN ranked 21, gap 12: BEL win."
+    },
+    {
+      "fixture_id": "G4",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "NZL ranked 85, EGY ranked 29, gap 56: EGY win."
+    },
+    {
+      "fixture_id": "G5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "NZL ranked 85, BEL ranked 9, gap 76: BEL win."
+    },
+    {
+      "fixture_id": "G6",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "EGY ranked 29, IRN ranked 21, gap 8: draw."
+    },
+    {
+      "fixture_id": "H1",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ESP ranked 2, CPV ranked 69, gap 67: ESP win."
+    },
+    {
+      "fixture_id": "H2",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "KSA ranked 61, URU ranked 17, gap 44: URU win."
+    },
+    {
+      "fixture_id": "H3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ESP ranked 2, KSA ranked 61, gap 59: ESP win."
+    },
+    {
+      "fixture_id": "H4",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "URU ranked 17, CPV ranked 69, gap 52: URU win."
+    },
+    {
+      "fixture_id": "H5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "URU ranked 17, ESP ranked 2, gap 15: ESP win."
+    },
+    {
+      "fixture_id": "H6",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "CPV ranked 69, KSA ranked 61, gap 8: draw."
+    },
+    {
+      "fixture_id": "I1",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "FRA ranked 1, SEN ranked 14, gap 13: FRA win."
+    },
+    {
+      "fixture_id": "I2",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "IRQ ranked 57, NOR ranked 31, gap 26: NOR win."
+    },
+    {
+      "fixture_id": "I3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "FRA ranked 1, IRQ ranked 57, gap 56: FRA win."
+    },
+    {
+      "fixture_id": "I4",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "NOR ranked 31, SEN ranked 14, gap 17: SEN win."
+    },
+    {
+      "fixture_id": "I5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "NOR ranked 31, FRA ranked 1, gap 30: FRA win."
+    },
+    {
+      "fixture_id": "I6",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "SEN ranked 14, IRQ ranked 57, gap 43: SEN win."
+    },
+    {
+      "fixture_id": "J1",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ARG ranked 3, AUT ranked 24, gap 21: ARG win."
+    },
+    {
+      "fixture_id": "J2",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ALG ranked 28, JOR ranked 63, gap 35: ALG win."
+    },
+    {
+      "fixture_id": "J3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ARG ranked 3, ALG ranked 28, gap 25: ARG win."
+    },
+    {
+      "fixture_id": "J4",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "JOR ranked 63, AUT ranked 24, gap 39: AUT win."
+    },
+    {
+      "fixture_id": "J5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "JOR ranked 63, ARG ranked 3, gap 60: ARG win."
+    },
+    {
+      "fixture_id": "J6",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "AUT ranked 24, ALG ranked 28, gap 4: draw."
+    },
+    {
+      "fixture_id": "K1",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "POR ranked 5, COL ranked 13, gap 8: draw."
+    },
+    {
+      "fixture_id": "K2",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "COD ranked 46, UZB ranked 50, gap 4: draw."
+    },
+    {
+      "fixture_id": "K3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "POR ranked 5, COD ranked 46, gap 41: POR win."
+    },
+    {
+      "fixture_id": "K4",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "UZB ranked 50, COL ranked 13, gap 37: COL win."
+    },
+    {
+      "fixture_id": "K5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "UZB ranked 50, POR ranked 5, gap 45: POR win."
+    },
+    {
+      "fixture_id": "K6",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "COL ranked 13, COD ranked 46, gap 33: COL win."
+    },
+    {
+      "fixture_id": "L1",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ENG ranked 4, CRO ranked 11, gap 7: draw."
+    },
+    {
+      "fixture_id": "L2",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "PAN ranked 33, GHA ranked 74, gap 41: PAN win."
+    },
+    {
+      "fixture_id": "L3",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ENG ranked 4, PAN ranked 33, gap 29: ENG win."
+    },
+    {
+      "fixture_id": "L4",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "GHA ranked 74, CRO ranked 11, gap 63: CRO win."
+    },
+    {
+      "fixture_id": "L5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "GHA ranked 74, ENG ranked 4, gap 70: ENG win."
+    },
+    {
+      "fixture_id": "L6",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "CRO ranked 11, PAN ranked 33, gap 22: CRO win."
+    }
+  ]
+}
