@@ -62,9 +62,8 @@
     background: var(--blue);
     color: var(--yellow);
     font-size: calc(var(--cell) * 1.45);
+    line-height: 1.9;
     font-weight: 400;
-    transform: scaleY(1.5);
-    transform-origin: top;
     text-transform: uppercase;
     padding: 2px 10px;
     margin: 4px 0 calc(var(--cell) * 1.2);
@@ -94,7 +93,20 @@
   h2::before { content: "■ "; color: var(--cyan); }
 
   /* ---- tables ---- */
-  .scrollwrap { overflow-x: auto; }
+  /* edge shadows hint that a table can be scrolled horizontally; each
+     pair of gradients self-hides once scrolled to that edge */
+  .scrollwrap {
+    overflow-x: auto;
+    background:
+      linear-gradient(to right, var(--bg) 50%, transparent) left,
+      linear-gradient(to left, var(--bg) 50%, transparent) right,
+      linear-gradient(to right, var(--cyan), transparent) left,
+      linear-gradient(to left, var(--cyan), transparent) right;
+    background-repeat: no-repeat;
+    background-color: var(--bg);
+    background-size: 20px 100%, 20px 100%, 8px 100%, 8px 100%;
+    background-attachment: local, local, scroll, scroll;
+  }
   table { border-collapse: collapse; width: 100%; white-space: nowrap; }
   th, td { padding: 3px 12px 3px 0; text-align: left; vertical-align: top; }
   th { color: var(--cyan); font-weight: 400; text-transform: uppercase; }
