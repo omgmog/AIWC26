@@ -106,6 +106,13 @@
     background-color: var(--bg);
     background-size: 20px 100%, 20px 100%, 8px 100%, 8px 100%;
     background-attachment: local, local, scroll, scroll;
+    scrollbar-color: var(--dim) var(--bg);
+  }
+  .scrollwrap::-webkit-scrollbar { height: 10px; }
+  .scrollwrap::-webkit-scrollbar-track { background: var(--bg); }
+  .scrollwrap::-webkit-scrollbar-thumb {
+    background: var(--dim);
+    border-radius: 0;
   }
   table { border-collapse: collapse; width: 100%; white-space: nowrap; }
   th, td { padding: 3px 12px 3px 0; text-align: left; vertical-align: top; }
