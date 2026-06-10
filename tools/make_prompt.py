@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-doc = json.loads((ROOT / "data" / "fixtures.json").read_text(encoding="utf-8"))
+doc = json.loads((ROOT / "_data" / "fixtures.json").read_text(encoding="utf-8"))
 teams, fixtures = doc["teams"], doc["fixtures"]
 
 lines = []

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000000;
+    --ink: #e8e8e8;
+    --yellow: #ffe100;
+    --cyan: #00e5e5;
+    --green: #19e619;
+    --red: #ff3b30;
+    --blue: #0030c0;
+    --dim: #6f6f6f;
+    --cell: clamp(15px, 2.1vw, 21px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); }
+  body {
+    font-family: "VT323", ui-monospace, "Cascadia Mono", Menlo, monospace;
+    font-size: var(--cell);
+    line-height: 1.35;
+    color: var(--ink);
+    background: var(--bg);
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 12px 64px;
+    -webkit-font-smoothing: none;
+  }
+  a { color: var(--cyan); }
+  ::selection { background: var(--yellow); color: #000; }
+  :focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+
+  /* ---- teletext page header ---- */
+  header.ttx {
+    display: flex;
+    justify-content: space-between;
+    gap: 1ch;
+    padding: 6px 0;
+    color: var(--ink);
+    flex-wrap: wrap;
+  }
+  header.ttx .pageno { color: var(--ink); }
+  header.ttx .service { color: var(--yellow); }
+  header.ttx .clock { color: var(--yellow); }
+  header.ttx .clock::after {
+    content: "▮";
+    animation: blink 1s steps(1) infinite;
+    margin-left: 0.5ch;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    header.ttx .clock::after { animation: none; }
+  }
+
+  h1.banner {
+    background: var(--blue);
+    color: var(--yellow);
+    font-size: calc(var(--cell) * 1.45);
+    font-weight: 400;
+    transform: scaleY(1.5);
+    transform-origin: top;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    margin: 4px 0 calc(var(--cell) * 1.2);
+    letter-spacing: 0.05em;
+  }
+  .intro { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 16px; margin: 8px 0 24px; }
+  .strap { color: var(--cyan); margin: 0; max-width: 70ch; flex: 1 1 40ch; }
+
+  .next-match {
+    flex: 0 0 auto;
+    min-width: 22ch;
+    border: 1px solid var(--cyan);
+    padding: 4px 12px 6px;
+    color: var(--ink);
+  }
+  .next-match strong { color: var(--yellow); letter-spacing: 0.05em; }
+  .next-match .when { color: var(--cyan); }
+
+  h2 {
+    color: var(--yellow);
+    font-size: calc(var(--cell) * 1.15);
+    font-weight: 400;
+    margin: 28px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  h2::before { content: "■ "; color: var(--cyan); }
+
+  /* ---- tables ---- */
+  .scrollwrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; white-space: nowrap; }
+  th, td { padding: 3px 12px 3px 0; text-align: left; vertical-align: top; }
+  th { color: var(--cyan); font-weight: 400; text-transform: uppercase; }
+  td.num, th.num { text-align: right; }
+  tr.sep td { border-top: 1px dotted #333; }
+
+  #leaderboard td:first-child { color: var(--yellow); }
+  #leaderboard td.pts { color: var(--green); }
+  #leaderboard .crown { color: var(--yellow); }
+
+  /* prediction cells */
+  .p-exact   { color: var(--green); }
+  .p-result  { color: var(--cyan); }
+  .p-wrong   { color: var(--red); }
+  .p-pending { color: var(--ink); }
+  .ft        { color: var(--yellow); }
+  .noft      { color: var(--dim); }
+  .disagree  { color: var(--yellow); }
+  abbr { text-decoration: none; }
+
+  /* ---- group nav ---- */
+  nav.groups { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 4px; }
+  nav.groups button {
+    font: inherit;
+    background: #111;
+    color: var(--cyan);
+    border: 1px solid #333;
+    padding: 2px 12px;
+    cursor: pointer;
+  }
+  nav.groups button[aria-pressed="true"] {
+    background: var(--yellow);
+    color: #000;
+    border-color: var(--yellow);
+  }
+
+  .legend { color: var(--dim); margin: 10px 0 0; }
+  .legend .p-exact, .legend .p-result, .legend .p-wrong { padding-right: 1.5ch; }
+
+  details.method { margin: 6px 0; color: var(--dim); max-width: 80ch; white-space: normal; }
+  details.method summary { color: var(--cyan); cursor: pointer; }
+
+  footer {
+    margin-top: 48px;
+    color: var(--dim);
+    border-top: 1px dotted #333;
+    padding-top: 10px;
+    max-width: 80ch;
+  }
+  footer code { font: inherit;}
+  .err { color: var(--red); white-space: normal; }
+</style>
+</head>
+<body>
+
+<header class="ttx">
+  <a class="pageno" href="https://omgmog.net">OMGMOG</a>
+  <span class="service">AIWC26</span>
+  <span class="clock" id="clock">--- -- --- --:--/--</span>
+</header>
+
+<h1 class="banner">AI vs AI World Cup 2026 sweepstake</h1>
+<div class="intro">
+  <p class="strap">
+    Several large language models were handed an identical brief and asked to
+    predict every group-stage scoreline before kick-off. Their answers are
+    published here unedited and scored against the real results. None of them
+    have seen a football.
+  </p>
+  <aside class="next-match" id="nextMatch" aria-label="Next match">
+    {% assign nm = site.data.computed.next_match %}
+    {% if nm %}
+      <strong>NEXT UP — GRP {{ nm.group }}</strong><br>
+      <span class="when">{{ nm.when }}</span><br>
+      {{ nm.home_name | escape }} <span style="color:var(--dim)">v</span> {{ nm.away_name | escape }}
+    {% else %}
+      <strong>NEXT UP</strong><br>Schedule TBC
+    {% endif %}
+  </aside>
+</div>
+
+{{ content }}
+
+<footer>
+  <p>Actual scores are 90-minute results, entered manually in
+  <code>_data/results.json</code> as the group stage unfolds. Predictions were
+  generated on or before 10 June 2026 and are immutable. Fixture data
+  compiled from the official draw and March 2026 playoff results.</p>
+  <p>Source and raw data on <a href="https://github.com/omgmog/AIWC26">GitHub</a>.</p>
+</footer>
+
+<script>
+(function () {
+  const $ = (s, el = document) => el.querySelector(s);
+
+  // teletext clock
+  let lastSecond = -1;
+  function tick() {
+    const d = new Date();
+    if (d.getSeconds() !== lastSecond) {
+      lastSecond = d.getSeconds();
+      const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+      const mons = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      const p = n => String(n).padStart(2, "0");
+      $("#clock").textContent =
+        `${days[d.getDay()]} ${p(d.getDate())} ${mons[d.getMonth()]} ` +
+        `${p(d.getHours())}:${p(d.getMinutes())}/${p(d.getSeconds())}`;
+    }
+    requestAnimationFrame(tick);
+  }
+  tick();
+
+  // group filter: pre-rendered sections, just toggle visibility
+  const nav = $("#groupnav");
+  if (nav) {
+    nav.hidden = false;
+    nav.addEventListener("click", e => {
+      const b = e.target.closest("button");
+      if (!b) return;
+      const g = b.dataset.g;
+      nav.querySelectorAll("button").forEach(btn =>
+        btn.setAttribute("aria-pressed", btn === b ? "true" : "false"));
+      document.querySelectorAll(".group-section").forEach(sec => {
+        sec.hidden = !(g === "ALL" || sec.dataset.group === g);
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>

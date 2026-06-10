@@ -2,3 +2,8 @@
 __pycache__/
 *.pyc
 .claude/
+_site/
+.bundle/
+vendor/
+.jekyll-cache/
+.jekyll-metadata

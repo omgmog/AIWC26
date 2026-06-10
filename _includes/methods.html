@@ -1,0 +1,8 @@
+<div id="methods">
+{% for m in site.data.computed.models %}
+  <details class="method">
+    <summary>{{ m.model | escape }} — method</summary>
+    <p>{{ m.method_notes | default: "No notes supplied." | escape }} <em>(generated {{ m.generated }})</em></p>
+  </details>
+{% endfor %}
+</div>

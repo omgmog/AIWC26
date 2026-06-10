@@ -1,0 +1,11 @@
+title: "AIWC26 — AI vs AI World Cup 2026 sweepstake"
+baseurl: "/AIWC26"
+url: "https://blog.omgmog.net"
+
+exclude:
+  - tools
+  - prompt.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

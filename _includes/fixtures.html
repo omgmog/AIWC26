@@ -1,0 +1,31 @@
+<div id="fixtures">
+{% assign grouped = site.data.computed.fixtures | group_by: "group" %}
+{% for grp in grouped %}
+  <section class="group-section" data-group="{{ grp.name }}">
+    <h2 id="group-{{ grp.name }}">Group {{ grp.name }}</h2>
+    <div class="scrollwrap">
+    <table aria-label="Group {{ grp.name }} fixtures">
+      <thead><tr>
+        <th>Fixture</th><th class="num">Actual</th>
+        {% for m in site.data.computed.models %}<th class="num">{{ m.model | escape }}</th>{% endfor %}
+      </tr></thead>
+      <tbody>
+      {% for f in grp.items %}
+        <tr class="{% unless forloop.first %}sep{% endunless %}">
+          <td>
+            {% if f.disagree %}<span class="disagree" title="Models split on the result">◆</span>{% else %}<span class="disagree" style="visibility:hidden">◆</span>{% endif %}
+            <span style="color:var(--dim)">{{ f.id }}</span>
+            {{ f.home_name | escape }} <span style="color:var(--dim)">v</span> {{ f.away_name | escape }}
+          </td>
+          <td class="num"><span class="{{ f.ft_class }}">{{ f.ft_text }}</span></td>
+          {% for c in f.cells %}
+          <td class="num {{ c.cls }}"><abbr title="{{ c.reasoning | escape }}">{{ c.text }}</abbr></td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </section>
+{% endfor %}
+</div>

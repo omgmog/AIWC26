@@ -1,0 +1,6 @@
+<nav class="groups" id="groupnav" aria-label="Filter by group" hidden>
+  <button type="button" aria-pressed="true" data-g="ALL">All</button>
+  {% for g in site.data.computed.groups %}
+  <button type="button" aria-pressed="false" data-g="{{ g }}">Grp {{ g }}</button>
+  {% endfor %}
+</nav>
