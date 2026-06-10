@@ -107,6 +107,8 @@ module AIWC26
         {
           "id" => f["id"],
           "group" => f["group"],
+          "home_code" => f["home"],
+          "away_code" => f["away"],
           "home_name" => teams[f["home"]]["name"],
           "away_name" => teams[f["away"]]["name"],
           "ft_text" => ft_text,
