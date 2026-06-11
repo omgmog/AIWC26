@@ -81,6 +81,14 @@
   }
   .next-match strong { color: var(--yellow); letter-spacing: 0.05em; }
   .next-match .when { color: var(--cyan); }
+  .next-match[data-fixture-id] { cursor: pointer; }
+  .next-match[data-fixture-id]:hover { background: rgba(255,255,255,0.05); }
+
+  @keyframes flash-highlight {
+    0%, 100% { background: transparent; }
+    25%, 75% { background: rgba(255, 255, 0, 0.15); }
+  }
+  tr.flash { animation: flash-highlight 1.2s ease-in-out 2; }
 
   h2 {
     color: var(--yellow);
@@ -240,6 +248,32 @@
     ));
     const MATCH_DURATION_MS = 125 * 60 * 1000; // ~2h05m incl. stoppage time
 
+    function scrollToFixture(id) {
+      const row = document.getElementById(`fixture-${id}`);
+      if (!row) return;
+
+      const section = row.closest(".group-section");
+      if (section && section.hidden) {
+        const allBtn = $('#groupnav button[data-g="ALL"]');
+        if (allBtn) allBtn.click();
+      }
+
+      row.scrollIntoView({ behavior: "smooth", block: "center" });
+      row.classList.remove("flash");
+      void row.offsetWidth; // restart animation if already applied
+      row.classList.add("flash");
+    }
+
+    nextMatchEl.addEventListener("click", () => {
+      if (nextMatchEl.dataset.fixtureId) scrollToFixture(nextMatchEl.dataset.fixtureId);
+    });
+    nextMatchEl.addEventListener("keydown", e => {
+      if ((e.key === "Enter" || e.key === " ") && nextMatchEl.dataset.fixtureId) {
+        e.preventDefault();
+        scrollToFixture(nextMatchEl.dataset.fixtureId);
+      }
+    });
+
     Promise.all([
       fetch("{{ '/data/fixtures.json' | relative_url }}").then(r => r.json()),
       fetch("{{ '/data/results.json' | relative_url }}").then(r => r.json()),
@@ -255,6 +289,9 @@
       function render() {
         if (upcoming.length === 0) {
           nextMatchEl.innerHTML = "<strong>NEXT UP</strong><br>Schedule TBC";
+          delete nextMatchEl.dataset.fixtureId;
+          nextMatchEl.removeAttribute("role");
+          nextMatchEl.removeAttribute("tabindex");
           return;
         }
 
@@ -290,6 +327,10 @@
           `<strong>${live ? "LIVE" : "NEXT UP"} — GRP ${f.group}</strong><br>` +
           `<span class="when">${when}</span><br>` +
           `${homeName} <span style="color:var(--dim)">v</span> ${awayName}`;
+
+        nextMatchEl.dataset.fixtureId = f.id;
+        nextMatchEl.setAttribute("role", "button");
+        nextMatchEl.setAttribute("tabindex", "0");
       }
 
       render();

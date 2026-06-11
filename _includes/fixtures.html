@@ -11,7 +11,7 @@
       </tr></thead>
       <tbody>
       {% for f in grp.items %}
-        <tr class="{% unless forloop.first %}sep{% endunless %}">
+        <tr id="fixture-{{ f.id }}" class="{% unless forloop.first %}sep{% endunless %}">
           <td>
             {% if f.disagree %}<span class="disagree" title="Models split on the result">◆</span>{% else %}<span class="disagree" style="visibility:hidden">◆</span>{% endif %}
             <span style="color:var(--dim)">{{ f.id }}</span>
