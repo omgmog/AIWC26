@@ -1,0 +1,512 @@
+{
+"model": "Gemini 3.1 Pro",
+"provider": "Google",
+"generated": "2026-06-11",
+"method_notes": "Predictions synthesize historical Elo ratings, recent continental tournament form, and venue advantages for North American host nations. Baseline scoreline probabilities were adjusted based on squad depth, tactical matchups, and key player form during the 2025-26 club season.",
+"predictions": [
+{
+"fixture_id": "A1",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "Mexico benefits from a massive home-continent crowd advantage and superior tactical cohesion."
+},
+{
+"fixture_id": "A2",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.45,
+"reasoning": "A tight tactical battle between South Korea's transition speed and Czechia's organized block."
+},
+{
+"fixture_id": "A3",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.55,
+"reasoning": "Mexico edges a highly competitive fixture spurred on by altitude and familiar climate conditions."
+},
+{
+"fixture_id": "A4",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.60,
+"reasoning": "Czechia's European pedigree and set-piece advantages prove too much for South Africa."
+},
+{
+"fixture_id": "A5",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.50,
+"reasoning": "Mexico secures the group with a narrow win driven by intense pressing in the heat."
+},
+{
+"fixture_id": "A6",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.70,
+"reasoning": "South Korea's elite attacking quality outclasses South Africa's defense."
+},
+{
+"fixture_id": "B1",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.45,
+"reasoning": "Canada's host momentum balances out Switzerland's superior tournament experience."
+},
+{
+"fixture_id": "B2",
+"home_score": 1,
+"away_score": 0,
+"confidence": 0.50,
+"reasoning": "Qatar grinds out a narrow victory against a transitional Bosnia side."
+},
+{
+"fixture_id": "B3",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "Canada's pace on the wings overwhelms Qatar's defensive structure."
+},
+{
+"fixture_id": "B4",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.70,
+"reasoning": "Switzerland comfortably dictates the midfield tempo."
+},
+{
+"fixture_id": "B5",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.55,
+"reasoning": "Canada secures progression in front of a raucous home crowd."
+},
+{
+"fixture_id": "B6",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.75,
+"reasoning": "Switzerland efficiently dispatches Qatar to lock up the top of the group."
+},
+{
+"fixture_id": "C1",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.60,
+"reasoning": "Brazil's attacking depth ultimately breaks down a stubborn Moroccan defense."
+},
+{
+"fixture_id": "C2",
+"home_score": 0,
+"away_score": 3,
+"confidence": 0.80,
+"reasoning": "Scotland dominates possession and physically overpowers Haiti."
+},
+{
+"fixture_id": "C3",
+"home_score": 4,
+"away_score": 0,
+"confidence": 0.85,
+"reasoning": "A significant mismatch where Brazil's forwards capitalize on defensive errors."
+},
+{
+"fixture_id": "C4",
+"home_score": 0,
+"away_score": 1,
+"confidence": 0.50,
+"reasoning": "Morocco's tactical discipline earns them a vital, narrow win."
+},
+{
+"fixture_id": "C5",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.70,
+"reasoning": "Brazil maintains control and exploits spaces left by a desperate Scotland."
+},
+{
+"fixture_id": "C6",
+"home_score": 3,
+"away_score": 0,
+"confidence": 0.75,
+"reasoning": "Morocco cruises to victory to secure their spot in the knockouts."
+},
+{
+"fixture_id": "D1",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "USA leverages strong home support and dynamic midfield play."
+},
+{
+"fixture_id": "D2",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.60,
+"reasoning": "Türkiye's technical superiority and recent form outshines Australia."
+},
+{
+"fixture_id": "D3",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.55,
+"reasoning": "USA edges a physical battle through set-piece execution."
+},
+{
+"fixture_id": "D4",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.40,
+"reasoning": "Paraguay's defensive grit frustrates Türkiye into a stalemate."
+},
+{
+"fixture_id": "D5",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.45,
+"reasoning": "Both teams settle for a pragmatic draw that suits their progression hopes."
+},
+{
+"fixture_id": "D6",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.50,
+"reasoning": "Paraguay's South American intensity earns them a close victory."
+},
+{
+"fixture_id": "E1",
+"home_score": 4,
+"away_score": 0,
+"confidence": 0.85,
+"reasoning": "Germany ruthlessly exposes Curaçao's lack of top-level experience."
+},
+{
+"fixture_id": "E2",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.55,
+"reasoning": "Ecuador's high-intensity style and climate familiarity overcomes Ivory Coast."
+},
+{
+"fixture_id": "E3",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.60,
+"reasoning": "Germany controls the tempo but concedes late to a dangerous Ivorian counter."
+},
+{
+"fixture_id": "E4",
+"home_score": 3,
+"away_score": 0,
+"confidence": 0.80,
+"reasoning": "Ecuador easily dispatches Curaçao to build goal difference."
+},
+{
+"fixture_id": "E5",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.40,
+"reasoning": "Ecuador's physical midfield successfully disrupts Germany's passing lanes."
+},
+{
+"fixture_id": "E6",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.70,
+"reasoning": "Ivory Coast ends their group stage with a comfortable, professional win."
+},
+{
+"fixture_id": "F1",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.55,
+"reasoning": "The Netherlands barely edge a highly technical and fast-paced Japanese side."
+},
+{
+"fixture_id": "F2",
+"home_score": 1,
+"away_score": 0,
+"confidence": 0.50,
+"reasoning": "Sweden grinds out a low-scoring win via a set-piece header."
+},
+{
+"fixture_id": "F3",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "Dutch fluidity and possession play easily bypasses Sweden's rigid lines."
+},
+{
+"fixture_id": "F4",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.60,
+"reasoning": "Japan's quick transitions completely unlock the Tunisian defense."
+},
+{
+"fixture_id": "F5",
+"home_score": 0,
+"away_score": 3,
+"confidence": 0.75,
+"reasoning": "The Netherlands cruise to victory against an overmatched Tunisia."
+},
+{
+"fixture_id": "F6",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.45,
+"reasoning": "A tense draw where Japan's agility meets Sweden's physical resilience."
+},
+{
+"fixture_id": "G1",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "Belgium's golden generation remnants provide enough quality to bypass Egypt."
+},
+{
+"fixture_id": "G2",
+"home_score": 1,
+"away_score": 0,
+"confidence": 0.55,
+"reasoning": "Iran defensively stifles New Zealand and nabs a counter-attacking goal."
+},
+{
+"fixture_id": "G3",
+"home_score": 3,
+"away_score": 0,
+"confidence": 0.75,
+"reasoning": "Belgium's playmakers tear through Iran's low block."
+},
+{
+"fixture_id": "G4",
+"home_score": 0,
+"away_score": 1,
+"confidence": 0.60,
+"reasoning": "Egypt relies on star individual quality to break down New Zealand."
+},
+{
+"fixture_id": "G5",
+"home_score": 0,
+"away_score": 4,
+"confidence": 0.85,
+"reasoning": "Belgium heavily rotates but still comfortably overwhelms New Zealand."
+},
+{
+"fixture_id": "G6",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.40,
+"reasoning": "A gritty, low-risk draw that benefits both sides' qualification arithmetic."
+},
+{
+"fixture_id": "H1",
+"home_score": 3,
+"away_score": 0,
+"confidence": 0.80,
+"reasoning": "Spain's tiki-taka starves Cape Verde of the ball completely."
+},
+{
+"fixture_id": "H2",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.70,
+"reasoning": "Uruguay's high press under Bielsa forces critical errors from Saudi Arabia."
+},
+{
+"fixture_id": "H3",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.75,
+"reasoning": "Spain methodically dismantles the Saudi defense with sustained pressure."
+},
+{
+"fixture_id": "H4",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "Uruguay's lethal finishing puts away a spirited Cape Verde side."
+},
+{
+"fixture_id": "H5",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.50,
+"reasoning": "Spain's midfield control ultimately triumphs in a high-quality tactical chess match."
+},
+{
+"fixture_id": "H6",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.45,
+"reasoning": "A relatively even matchup ends in a dead heat as both teams exit."
+},
+{
+"fixture_id": "I1",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "France's sheer depth and athleticism neutralizes Senegal's threat."
+},
+{
+"fixture_id": "I2",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.70,
+"reasoning": "Norway's star attackers clinical finishing is the difference against Iraq."
+},
+{
+"fixture_id": "I3",
+"home_score": 3,
+"away_score": 0,
+"confidence": 0.85,
+"reasoning": "France dominates possession and easily bypasses Iraq's defensive setup."
+},
+{
+"fixture_id": "I4",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.45,
+"reasoning": "Senegal's physicality matches Norway stride for stride in a tense draw."
+},
+{
+"fixture_id": "I5",
+"home_score": 1,
+"away_score": 3,
+"confidence": 0.60,
+"reasoning": "France's world-class wingers exploit the spaces behind Norway's attack."
+},
+{
+"fixture_id": "I6",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "Senegal secures their progression by comfortably dispatching Iraq."
+},
+{
+"fixture_id": "J1",
+"home_score": 3,
+"away_score": 0,
+"confidence": 0.70,
+"reasoning": "Argentina's fluid attack pulls Austria's pressing structure apart."
+},
+{
+"fixture_id": "J2",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "Algeria's European-based talent easily outclasses Jordan."
+},
+{
+"fixture_id": "J3",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.60,
+"reasoning": "Argentina professionally manages the game to bypass a tough Algerian midfield."
+},
+{
+"fixture_id": "J4",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.75,
+"reasoning": "Austria's aggressive pressing forces turnovers leading to quick goals against Jordan."
+},
+{
+"fixture_id": "J5",
+"home_score": 0,
+"away_score": 4,
+"confidence": 0.90,
+"reasoning": "A massive mismatch where Argentina freely creates scoring opportunities."
+},
+{
+"fixture_id": "J6",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.40,
+"reasoning": "Austria and Algeria play out a cautious draw to ensure both advance."
+},
+{
+"fixture_id": "K1",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.55,
+"reasoning": "Portugal's individual brilliance edges a fiercely competitive Colombia side."
+},
+{
+"fixture_id": "K2",
+"home_score": 1,
+"away_score": 0,
+"confidence": 0.50,
+"reasoning": "DR Congo's physical superiority in midfield grinds down Uzbekistan."
+},
+{
+"fixture_id": "K3",
+"home_score": 3,
+"away_score": 0,
+"confidence": 0.80,
+"reasoning": "Portugal picks apart DR Congo with precise ball movement."
+},
+{
+"fixture_id": "K4",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.70,
+"reasoning": "Colombia's flair and quickness completely overrun Uzbekistan."
+},
+{
+"fixture_id": "K5",
+"home_score": 0,
+"away_score": 3,
+"confidence": 0.85,
+"reasoning": "Portugal rotates heavily but still comfortably controls the match."
+},
+{
+"fixture_id": "K6",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "Colombia establishes group dominance with an easy win over DR Congo."
+},
+{
+"fixture_id": "L1",
+"home_score": 1,
+"away_score": 0,
+"confidence": 0.55,
+"reasoning": "England scrapes a pragmatic, narrow win against a technically sound Croatia."
+},
+{
+"fixture_id": "L2",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.65,
+"reasoning": "Ghana's transitional speed punishes Panama's defensive lapses."
+},
+{
+"fixture_id": "L3",
+"home_score": 3,
+"away_score": 0,
+"confidence": 0.85,
+"reasoning": "England comfortably dominates possession and creates a wealth of chances against Panama."
+},
+{
+"fixture_id": "L4",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.50,
+"reasoning": "Croatia's veteran midfield takes the sting out of the game to beat Ghana."
+},
+{
+"fixture_id": "L5",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.70,
+"reasoning": "England remains solid at the back and picks Ghana off on the counter."
+},
+{
+"fixture_id": "L6",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.75,
+"reasoning": "Croatia dictates the tempo to easily handle a fatigued Panama side."
+}
+]
+}
