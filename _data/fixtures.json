@@ -1,7 +1,7 @@
 {
   "tournament": "FIFA World Cup 2026",
   "stage": "Group stage",
-  "note": "Fixture order within each group uses the standard round-robin rotation. Verify home/away order and dates against the official schedule; edit here, then regenerate prompt.md with make_prompt.py.",
+  "note": "Fixture order within each group uses the standard round-robin rotation. Verify home/away order and dates against the official schedule; edit here, then regenerate prompt.md with make_prompt.py. Times are kickoff in US Eastern (ET/UTC-04:00) as 24h HH:MM.",
   "teams": {
     "MEX": {
       "name": "Mexico",
@@ -204,6 +204,7 @@
       "home": "MEX",
       "away": "RSA",
       "date": "2026-06-11",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -213,6 +214,7 @@
       "home": "KOR",
       "away": "CZE",
       "date": "2026-06-11",
+      "time": "22:00",
       "venue": null
     },
     {
@@ -222,6 +224,7 @@
       "home": "MEX",
       "away": "KOR",
       "date": "2026-06-18",
+      "time": "21:00",
       "venue": null
     },
     {
@@ -231,6 +234,7 @@
       "home": "CZE",
       "away": "RSA",
       "date": "2026-06-18",
+      "time": "12:00",
       "venue": null
     },
     {
@@ -240,6 +244,7 @@
       "home": "CZE",
       "away": "MEX",
       "date": "2026-06-24",
+      "time": "21:00",
       "venue": null
     },
     {
@@ -249,6 +254,7 @@
       "home": "RSA",
       "away": "KOR",
       "date": "2026-06-24",
+      "time": "21:00",
       "venue": null
     },
     {
@@ -258,6 +264,7 @@
       "home": "CAN",
       "away": "SUI",
       "date": "2026-06-24",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -267,6 +274,7 @@
       "home": "QAT",
       "away": "BIH",
       "date": "2026-06-24",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -276,6 +284,7 @@
       "home": "CAN",
       "away": "QAT",
       "date": "2026-06-18",
+      "time": "18:00",
       "venue": null
     },
     {
@@ -285,6 +294,7 @@
       "home": "BIH",
       "away": "SUI",
       "date": "2026-06-18",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -294,6 +304,7 @@
       "home": "BIH",
       "away": "CAN",
       "date": "2026-06-12",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -303,6 +314,7 @@
       "home": "SUI",
       "away": "QAT",
       "date": "2026-06-13",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -312,6 +324,7 @@
       "home": "BRA",
       "away": "MAR",
       "date": "2026-06-13",
+      "time": "18:00",
       "venue": null
     },
     {
@@ -321,6 +334,7 @@
       "home": "HAI",
       "away": "SCO",
       "date": "2026-06-13",
+      "time": "21:00",
       "venue": null
     },
     {
@@ -330,6 +344,7 @@
       "home": "BRA",
       "away": "HAI",
       "date": "2026-06-19",
+      "time": "20:30",
       "venue": null
     },
     {
@@ -339,6 +354,7 @@
       "home": "SCO",
       "away": "MAR",
       "date": "2026-06-19",
+      "time": "18:00",
       "venue": null
     },
     {
@@ -348,6 +364,7 @@
       "home": "SCO",
       "away": "BRA",
       "date": "2026-06-24",
+      "time": "18:00",
       "venue": null
     },
     {
@@ -357,6 +374,7 @@
       "home": "MAR",
       "away": "HAI",
       "date": "2026-06-24",
+      "time": "18:00",
       "venue": null
     },
     {
@@ -366,6 +384,7 @@
       "home": "USA",
       "away": "PAR",
       "date": "2026-06-12",
+      "time": "21:00",
       "venue": null
     },
     {
@@ -375,6 +394,7 @@
       "home": "AUS",
       "away": "TUR",
       "date": "2026-06-14",
+      "time": "12:00",
       "venue": null
     },
     {
@@ -384,6 +404,7 @@
       "home": "USA",
       "away": "AUS",
       "date": "2026-06-19",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -393,6 +414,7 @@
       "home": "TUR",
       "away": "PAR",
       "date": "2026-06-19",
+      "time": "23:00",
       "venue": null
     },
     {
@@ -402,6 +424,7 @@
       "home": "TUR",
       "away": "USA",
       "date": "2026-06-25",
+      "time": "22:00",
       "venue": null
     },
     {
@@ -411,6 +434,7 @@
       "home": "PAR",
       "away": "AUS",
       "date": "2026-06-25",
+      "time": "22:00",
       "venue": null
     },
     {
@@ -420,6 +444,7 @@
       "home": "GER",
       "away": "CUW",
       "date": "2026-06-14",
+      "time": "13:00",
       "venue": null
     },
     {
@@ -429,6 +454,7 @@
       "home": "CIV",
       "away": "ECU",
       "date": "2026-06-14",
+      "time": "19:00",
       "venue": null
     },
     {
@@ -438,6 +464,7 @@
       "home": "GER",
       "away": "CIV",
       "date": "2026-06-20",
+      "time": "16:00",
       "venue": null
     },
     {
@@ -447,6 +474,7 @@
       "home": "ECU",
       "away": "CUW",
       "date": "2026-06-20",
+      "time": "20:00",
       "venue": null
     },
     {
@@ -456,6 +484,7 @@
       "home": "ECU",
       "away": "GER",
       "date": "2026-06-25",
+      "time": "16:00",
       "venue": null
     },
     {
@@ -465,6 +494,7 @@
       "home": "CUW",
       "away": "CIV",
       "date": "2026-06-25",
+      "time": "16:00",
       "venue": null
     },
     {
@@ -474,6 +504,7 @@
       "home": "NED",
       "away": "JPN",
       "date": "2026-06-14",
+      "time": "16:00",
       "venue": null
     },
     {
@@ -483,6 +514,7 @@
       "home": "SWE",
       "away": "TUN",
       "date": "2026-06-14",
+      "time": "22:00",
       "venue": null
     },
     {
@@ -492,6 +524,7 @@
       "home": "NED",
       "away": "SWE",
       "date": "2026-06-20",
+      "time": "13:00",
       "venue": null
     },
     {
@@ -501,6 +534,7 @@
       "home": "TUN",
       "away": "JPN",
       "date": "2026-06-21",
+      "time": "12:00",
       "venue": null
     },
     {
@@ -510,6 +544,7 @@
       "home": "TUN",
       "away": "NED",
       "date": "2026-06-25",
+      "time": "19:00",
       "venue": null
     },
     {
@@ -519,6 +554,7 @@
       "home": "JPN",
       "away": "SWE",
       "date": "2026-06-25",
+      "time": "19:00",
       "venue": null
     },
     {
@@ -528,6 +564,7 @@
       "home": "BEL",
       "away": "EGY",
       "date": "2026-06-15",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -537,6 +574,7 @@
       "home": "IRN",
       "away": "NZL",
       "date": "2026-06-15",
+      "time": "21:00",
       "venue": null
     },
     {
@@ -546,6 +584,7 @@
       "home": "BEL",
       "away": "IRN",
       "date": "2026-06-21",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -555,6 +594,7 @@
       "home": "NZL",
       "away": "EGY",
       "date": "2026-06-21",
+      "time": "21:00",
       "venue": null
     },
     {
@@ -564,6 +604,7 @@
       "home": "NZL",
       "away": "BEL",
       "date": "2026-06-26",
+      "time": "23:00",
       "venue": null
     },
     {
@@ -573,6 +614,7 @@
       "home": "EGY",
       "away": "IRN",
       "date": "2026-06-26",
+      "time": "23:00",
       "venue": null
     },
     {
@@ -582,6 +624,7 @@
       "home": "ESP",
       "away": "CPV",
       "date": "2026-06-15",
+      "time": "12:00",
       "venue": null
     },
     {
@@ -591,6 +634,7 @@
       "home": "KSA",
       "away": "URU",
       "date": "2026-06-15",
+      "time": "18:00",
       "venue": null
     },
     {
@@ -600,6 +644,7 @@
       "home": "ESP",
       "away": "KSA",
       "date": "2026-06-21",
+      "time": "12:00",
       "venue": null
     },
     {
@@ -609,6 +654,7 @@
       "home": "URU",
       "away": "CPV",
       "date": "2026-06-21",
+      "time": "18:00",
       "venue": null
     },
     {
@@ -618,6 +664,7 @@
       "home": "URU",
       "away": "ESP",
       "date": "2026-06-26",
+      "time": "20:00",
       "venue": null
     },
     {
@@ -627,6 +674,7 @@
       "home": "CPV",
       "away": "KSA",
       "date": "2026-06-26",
+      "time": "20:00",
       "venue": null
     },
     {
@@ -636,6 +684,7 @@
       "home": "FRA",
       "away": "SEN",
       "date": "2026-06-16",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -645,6 +694,7 @@
       "home": "IRQ",
       "away": "NOR",
       "date": "2026-06-16",
+      "time": "18:00",
       "venue": null
     },
     {
@@ -654,6 +704,7 @@
       "home": "FRA",
       "away": "IRQ",
       "date": "2026-06-22",
+      "time": "17:00",
       "venue": null
     },
     {
@@ -663,6 +714,7 @@
       "home": "NOR",
       "away": "SEN",
       "date": "2026-06-22",
+      "time": "20:00",
       "venue": null
     },
     {
@@ -672,6 +724,7 @@
       "home": "NOR",
       "away": "FRA",
       "date": "2026-06-26",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -681,6 +734,7 @@
       "home": "SEN",
       "away": "IRQ",
       "date": "2026-06-26",
+      "time": "15:00",
       "venue": null
     },
     {
@@ -690,6 +744,7 @@
       "home": "ARG",
       "away": "AUT",
       "date": "2026-06-22",
+      "time": "13:00",
       "venue": null
     },
     {
@@ -699,6 +754,7 @@
       "home": "ALG",
       "away": "JOR",
       "date": "2026-06-22",
+      "time": "23:00",
       "venue": null
     },
     {
@@ -708,6 +764,7 @@
       "home": "ARG",
       "away": "ALG",
       "date": "2026-06-16",
+      "time": "21:00",
       "venue": null
     },
     {
@@ -717,6 +774,7 @@
       "home": "JOR",
       "away": "AUT",
       "date": "2026-06-17",
+      "time": "12:00",
       "venue": null
     },
     {
@@ -726,6 +784,7 @@
       "home": "JOR",
       "away": "ARG",
       "date": "2026-06-27",
+      "time": "22:00",
       "venue": null
     },
     {
@@ -735,6 +794,7 @@
       "home": "AUT",
       "away": "ALG",
       "date": "2026-06-27",
+      "time": "22:00",
       "venue": null
     },
     {
@@ -744,6 +804,7 @@
       "home": "POR",
       "away": "COL",
       "date": "2026-06-27",
+      "time": "19:30",
       "venue": null
     },
     {
@@ -753,6 +814,7 @@
       "home": "COD",
       "away": "UZB",
       "date": "2026-06-27",
+      "time": "19:30",
       "venue": null
     },
     {
@@ -762,6 +824,7 @@
       "home": "POR",
       "away": "COD",
       "date": "2026-06-17",
+      "time": "13:00",
       "venue": null
     },
     {
@@ -771,6 +834,7 @@
       "home": "UZB",
       "away": "COL",
       "date": "2026-06-17",
+      "time": "22:00",
       "venue": null
     },
     {
@@ -780,6 +844,7 @@
       "home": "UZB",
       "away": "POR",
       "date": "2026-06-23",
+      "time": "13:00",
       "venue": null
     },
     {
@@ -789,6 +854,7 @@
       "home": "COL",
       "away": "COD",
       "date": "2026-06-23",
+      "time": "22:00",
       "venue": null
     },
     {
@@ -798,6 +864,7 @@
       "home": "ENG",
       "away": "CRO",
       "date": "2026-06-17",
+      "time": "16:00",
       "venue": null
     },
     {
@@ -807,6 +874,7 @@
       "home": "PAN",
       "away": "GHA",
       "date": "2026-06-17",
+      "time": "19:00",
       "venue": null
     },
     {
@@ -816,6 +884,7 @@
       "home": "ENG",
       "away": "PAN",
       "date": "2026-06-27",
+      "time": "17:00",
       "venue": null
     },
     {
@@ -825,6 +894,7 @@
       "home": "GHA",
       "away": "CRO",
       "date": "2026-06-27",
+      "time": "17:00",
       "venue": null
     },
     {
@@ -834,6 +904,7 @@
       "home": "GHA",
       "away": "ENG",
       "date": "2026-06-23",
+      "time": "16:00",
       "venue": null
     },
     {
@@ -843,6 +914,7 @@
       "home": "CRO",
       "away": "PAN",
       "date": "2026-06-23",
+      "time": "19:00",
       "venue": null
     }
   ]

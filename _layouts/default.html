@@ -230,6 +230,73 @@
   }
   tick();
 
+  // next match widget: recomputed client-side from fixtures.json/results.json
+  // so TODAY/LIVE/OVERDUE stay accurate between site rebuilds, and kickoff
+  // times are shown in the visitor's local timezone.
+  const nextMatchEl = $("#nextMatch");
+  if (nextMatchEl) {
+    const escapeHtml = s => s.replace(/[&<>"']/g, c => (
+      { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+    ));
+    const MATCH_DURATION_MS = 125 * 60 * 1000; // ~2h05m incl. stoppage time
+
+    Promise.all([
+      fetch("{{ '/data/fixtures.json' | relative_url }}").then(r => r.json()),
+      fetch("{{ '/data/results.json' | relative_url }}").then(r => r.json()),
+    ]).then(([fixturesData, resultsData]) => {
+      const teams = fixturesData.teams;
+      const results = resultsData.results || {};
+
+      const upcoming = fixturesData.fixtures
+        .filter(f => f.date && f.time && !results[f.id])
+        .map(f => ({ ...f, kickoff: new Date(`${f.date}T${f.time}:00-04:00`) }))
+        .sort((a, b) => a.kickoff - b.kickoff);
+
+      function render() {
+        if (upcoming.length === 0) {
+          nextMatchEl.innerHTML = "<strong>NEXT UP</strong><br>Schedule TBC";
+          return;
+        }
+
+        const now = new Date();
+        const live = upcoming.find(f =>
+          f.kickoff <= now && now < new Date(f.kickoff.getTime() + MATCH_DURATION_MS));
+        const f = live || upcoming.find(f => f.kickoff > now) || upcoming[upcoming.length - 1];
+
+        let when;
+        const minsToKickoff = Math.round((f.kickoff - now) / 60000);
+        if (live) {
+          when = "LIVE NOW";
+        } else if (f.kickoff < now) {
+          when = "OVERDUE";
+        } else if (minsToKickoff < 60) {
+          when = `in ${minsToKickoff} min`;
+        } else if (minsToKickoff < 6 * 60) {
+          const hours = Math.floor(minsToKickoff / 60);
+          const mins = minsToKickoff % 60;
+          when = mins > 0 ? `in ${hours}h ${mins}m` : `in ${hours}h`;
+        } else {
+          const sameDay = f.kickoff.toDateString() === now.toDateString();
+          const fmt = new Intl.DateTimeFormat(undefined, sameDay
+            ? { hour: "2-digit", minute: "2-digit" }
+            : { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+          when = (sameDay ? "TODAY " : "") + fmt.format(f.kickoff);
+        }
+
+        const homeName = escapeHtml(teams[f.home].name);
+        const awayName = escapeHtml(teams[f.away].name);
+
+        nextMatchEl.innerHTML =
+          `<strong>${live ? "LIVE" : "NEXT UP"} — GRP ${f.group}</strong><br>` +
+          `<span class="when">${when}</span><br>` +
+          `${homeName} <span style="color:var(--dim)">v</span> ${awayName}`;
+      }
+
+      render();
+      setInterval(render, 30000);
+    }).catch(() => {}); // leave server-rendered fallback in place
+  }
+
   // group filter: pre-rendered sections, just toggle visibility
   const nav = $("#groupnav");
   if (nav) {
