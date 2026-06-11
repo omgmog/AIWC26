@@ -6,6 +6,7 @@
     "claude-sonnet-4-6.json",
     "chatgpt-gpt-5.5.json",
     "gemini-3.1-pro.json",
-    "gemini-3.5-flash.json"
+    "gemini-3.5-flash.json",
+    "human-1.0.json"
   ]
 }
