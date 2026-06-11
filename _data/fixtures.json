@@ -212,7 +212,7 @@
       "matchday": 1,
       "home": "KOR",
       "away": "CZE",
-      "date": null,
+      "date": "2026-06-11",
       "venue": null
     },
     {
@@ -221,7 +221,7 @@
       "matchday": 2,
       "home": "MEX",
       "away": "KOR",
-      "date": null,
+      "date": "2026-06-18",
       "venue": null
     },
     {
@@ -230,7 +230,7 @@
       "matchday": 2,
       "home": "CZE",
       "away": "RSA",
-      "date": null,
+      "date": "2026-06-18",
       "venue": null
     },
     {
@@ -239,7 +239,7 @@
       "matchday": 3,
       "home": "CZE",
       "away": "MEX",
-      "date": null,
+      "date": "2026-06-24",
       "venue": null
     },
     {
@@ -248,7 +248,7 @@
       "matchday": 3,
       "home": "RSA",
       "away": "KOR",
-      "date": null,
+      "date": "2026-06-24",
       "venue": null
     },
     {
@@ -257,7 +257,7 @@
       "matchday": 1,
       "home": "CAN",
       "away": "SUI",
-      "date": null,
+      "date": "2026-06-24",
       "venue": null
     },
     {
@@ -266,7 +266,7 @@
       "matchday": 1,
       "home": "QAT",
       "away": "BIH",
-      "date": null,
+      "date": "2026-06-24",
       "venue": null
     },
     {
@@ -275,7 +275,7 @@
       "matchday": 2,
       "home": "CAN",
       "away": "QAT",
-      "date": null,
+      "date": "2026-06-18",
       "venue": null
     },
     {
@@ -284,7 +284,7 @@
       "matchday": 2,
       "home": "BIH",
       "away": "SUI",
-      "date": null,
+      "date": "2026-06-18",
       "venue": null
     },
     {
@@ -293,7 +293,7 @@
       "matchday": 3,
       "home": "BIH",
       "away": "CAN",
-      "date": null,
+      "date": "2026-06-12",
       "venue": null
     },
     {
@@ -302,7 +302,7 @@
       "matchday": 3,
       "home": "SUI",
       "away": "QAT",
-      "date": null,
+      "date": "2026-06-13",
       "venue": null
     },
     {
@@ -311,7 +311,7 @@
       "matchday": 1,
       "home": "BRA",
       "away": "MAR",
-      "date": null,
+      "date": "2026-06-13",
       "venue": null
     },
     {
@@ -320,7 +320,7 @@
       "matchday": 1,
       "home": "HAI",
       "away": "SCO",
-      "date": null,
+      "date": "2026-06-13",
       "venue": null
     },
     {
@@ -329,7 +329,7 @@
       "matchday": 2,
       "home": "BRA",
       "away": "HAI",
-      "date": null,
+      "date": "2026-06-19",
       "venue": null
     },
     {
@@ -338,7 +338,7 @@
       "matchday": 2,
       "home": "SCO",
       "away": "MAR",
-      "date": null,
+      "date": "2026-06-19",
       "venue": null
     },
     {
@@ -347,7 +347,7 @@
       "matchday": 3,
       "home": "SCO",
       "away": "BRA",
-      "date": null,
+      "date": "2026-06-24",
       "venue": null
     },
     {
@@ -356,7 +356,7 @@
       "matchday": 3,
       "home": "MAR",
       "away": "HAI",
-      "date": null,
+      "date": "2026-06-24",
       "venue": null
     },
     {
@@ -374,7 +374,7 @@
       "matchday": 1,
       "home": "AUS",
       "away": "TUR",
-      "date": null,
+      "date": "2026-06-14",
       "venue": null
     },
     {
@@ -383,7 +383,7 @@
       "matchday": 2,
       "home": "USA",
       "away": "AUS",
-      "date": null,
+      "date": "2026-06-19",
       "venue": null
     },
     {
@@ -392,7 +392,7 @@
       "matchday": 2,
       "home": "TUR",
       "away": "PAR",
-      "date": null,
+      "date": "2026-06-19",
       "venue": null
     },
     {
@@ -401,7 +401,7 @@
       "matchday": 3,
       "home": "TUR",
       "away": "USA",
-      "date": null,
+      "date": "2026-06-25",
       "venue": null
     },
     {
@@ -410,7 +410,7 @@
       "matchday": 3,
       "home": "PAR",
       "away": "AUS",
-      "date": null,
+      "date": "2026-06-25",
       "venue": null
     },
     {
@@ -419,7 +419,7 @@
       "matchday": 1,
       "home": "GER",
       "away": "CUW",
-      "date": null,
+      "date": "2026-06-14",
       "venue": null
     },
     {
@@ -428,7 +428,7 @@
       "matchday": 1,
       "home": "CIV",
       "away": "ECU",
-      "date": null,
+      "date": "2026-06-14",
       "venue": null
     },
     {
@@ -437,7 +437,7 @@
       "matchday": 2,
       "home": "GER",
       "away": "CIV",
-      "date": null,
+      "date": "2026-06-20",
       "venue": null
     },
     {
@@ -446,7 +446,7 @@
       "matchday": 2,
       "home": "ECU",
       "away": "CUW",
-      "date": null,
+      "date": "2026-06-20",
       "venue": null
     },
     {
@@ -455,7 +455,7 @@
       "matchday": 3,
       "home": "ECU",
       "away": "GER",
-      "date": null,
+      "date": "2026-06-25",
       "venue": null
     },
     {
@@ -464,7 +464,7 @@
       "matchday": 3,
       "home": "CUW",
       "away": "CIV",
-      "date": null,
+      "date": "2026-06-25",
       "venue": null
     },
     {
@@ -473,7 +473,7 @@
       "matchday": 1,
       "home": "NED",
       "away": "JPN",
-      "date": null,
+      "date": "2026-06-14",
       "venue": null
     },
     {
@@ -482,7 +482,7 @@
       "matchday": 1,
       "home": "SWE",
       "away": "TUN",
-      "date": null,
+      "date": "2026-06-14",
       "venue": null
     },
     {
@@ -491,7 +491,7 @@
       "matchday": 2,
       "home": "NED",
       "away": "SWE",
-      "date": null,
+      "date": "2026-06-20",
       "venue": null
     },
     {
@@ -500,7 +500,7 @@
       "matchday": 2,
       "home": "TUN",
       "away": "JPN",
-      "date": null,
+      "date": "2026-06-21",
       "venue": null
     },
     {
@@ -509,7 +509,7 @@
       "matchday": 3,
       "home": "TUN",
       "away": "NED",
-      "date": null,
+      "date": "2026-06-25",
       "venue": null
     },
     {
@@ -518,7 +518,7 @@
       "matchday": 3,
       "home": "JPN",
       "away": "SWE",
-      "date": null,
+      "date": "2026-06-25",
       "venue": null
     },
     {
@@ -527,7 +527,7 @@
       "matchday": 1,
       "home": "BEL",
       "away": "EGY",
-      "date": null,
+      "date": "2026-06-15",
       "venue": null
     },
     {
@@ -536,7 +536,7 @@
       "matchday": 1,
       "home": "IRN",
       "away": "NZL",
-      "date": null,
+      "date": "2026-06-15",
       "venue": null
     },
     {
@@ -545,7 +545,7 @@
       "matchday": 2,
       "home": "BEL",
       "away": "IRN",
-      "date": null,
+      "date": "2026-06-21",
       "venue": null
     },
     {
@@ -554,7 +554,7 @@
       "matchday": 2,
       "home": "NZL",
       "away": "EGY",
-      "date": null,
+      "date": "2026-06-21",
       "venue": null
     },
     {
@@ -563,7 +563,7 @@
       "matchday": 3,
       "home": "NZL",
       "away": "BEL",
-      "date": null,
+      "date": "2026-06-26",
       "venue": null
     },
     {
@@ -572,7 +572,7 @@
       "matchday": 3,
       "home": "EGY",
       "away": "IRN",
-      "date": null,
+      "date": "2026-06-26",
       "venue": null
     },
     {
@@ -581,7 +581,7 @@
       "matchday": 1,
       "home": "ESP",
       "away": "CPV",
-      "date": null,
+      "date": "2026-06-15",
       "venue": null
     },
     {
@@ -590,7 +590,7 @@
       "matchday": 1,
       "home": "KSA",
       "away": "URU",
-      "date": null,
+      "date": "2026-06-15",
       "venue": null
     },
     {
@@ -599,7 +599,7 @@
       "matchday": 2,
       "home": "ESP",
       "away": "KSA",
-      "date": null,
+      "date": "2026-06-21",
       "venue": null
     },
     {
@@ -608,7 +608,7 @@
       "matchday": 2,
       "home": "URU",
       "away": "CPV",
-      "date": null,
+      "date": "2026-06-21",
       "venue": null
     },
     {
@@ -617,7 +617,7 @@
       "matchday": 3,
       "home": "URU",
       "away": "ESP",
-      "date": null,
+      "date": "2026-06-26",
       "venue": null
     },
     {
@@ -626,7 +626,7 @@
       "matchday": 3,
       "home": "CPV",
       "away": "KSA",
-      "date": null,
+      "date": "2026-06-26",
       "venue": null
     },
     {
@@ -635,7 +635,7 @@
       "matchday": 1,
       "home": "FRA",
       "away": "SEN",
-      "date": null,
+      "date": "2026-06-16",
       "venue": null
     },
     {
@@ -644,7 +644,7 @@
       "matchday": 1,
       "home": "IRQ",
       "away": "NOR",
-      "date": null,
+      "date": "2026-06-16",
       "venue": null
     },
     {
@@ -653,7 +653,7 @@
       "matchday": 2,
       "home": "FRA",
       "away": "IRQ",
-      "date": null,
+      "date": "2026-06-22",
       "venue": null
     },
     {
@@ -662,7 +662,7 @@
       "matchday": 2,
       "home": "NOR",
       "away": "SEN",
-      "date": null,
+      "date": "2026-06-22",
       "venue": null
     },
     {
@@ -671,7 +671,7 @@
       "matchday": 3,
       "home": "NOR",
       "away": "FRA",
-      "date": null,
+      "date": "2026-06-26",
       "venue": null
     },
     {
@@ -680,7 +680,7 @@
       "matchday": 3,
       "home": "SEN",
       "away": "IRQ",
-      "date": null,
+      "date": "2026-06-26",
       "venue": null
     },
     {
@@ -689,7 +689,7 @@
       "matchday": 1,
       "home": "ARG",
       "away": "AUT",
-      "date": null,
+      "date": "2026-06-22",
       "venue": null
     },
     {
@@ -698,7 +698,7 @@
       "matchday": 1,
       "home": "ALG",
       "away": "JOR",
-      "date": null,
+      "date": "2026-06-22",
       "venue": null
     },
     {
@@ -707,7 +707,7 @@
       "matchday": 2,
       "home": "ARG",
       "away": "ALG",
-      "date": null,
+      "date": "2026-06-16",
       "venue": null
     },
     {
@@ -716,7 +716,7 @@
       "matchday": 2,
       "home": "JOR",
       "away": "AUT",
-      "date": null,
+      "date": "2026-06-17",
       "venue": null
     },
     {
@@ -725,7 +725,7 @@
       "matchday": 3,
       "home": "JOR",
       "away": "ARG",
-      "date": null,
+      "date": "2026-06-27",
       "venue": null
     },
     {
@@ -734,7 +734,7 @@
       "matchday": 3,
       "home": "AUT",
       "away": "ALG",
-      "date": null,
+      "date": "2026-06-27",
       "venue": null
     },
     {
@@ -743,7 +743,7 @@
       "matchday": 1,
       "home": "POR",
       "away": "COL",
-      "date": null,
+      "date": "2026-06-27",
       "venue": null
     },
     {
@@ -752,7 +752,7 @@
       "matchday": 1,
       "home": "COD",
       "away": "UZB",
-      "date": null,
+      "date": "2026-06-27",
       "venue": null
     },
     {
@@ -761,7 +761,7 @@
       "matchday": 2,
       "home": "POR",
       "away": "COD",
-      "date": null,
+      "date": "2026-06-17",
       "venue": null
     },
     {
@@ -770,7 +770,7 @@
       "matchday": 2,
       "home": "UZB",
       "away": "COL",
-      "date": null,
+      "date": "2026-06-17",
       "venue": null
     },
     {
@@ -779,7 +779,7 @@
       "matchday": 3,
       "home": "UZB",
       "away": "POR",
-      "date": null,
+      "date": "2026-06-23",
       "venue": null
     },
     {
@@ -788,7 +788,7 @@
       "matchday": 3,
       "home": "COL",
       "away": "COD",
-      "date": null,
+      "date": "2026-06-23",
       "venue": null
     },
     {
@@ -797,7 +797,7 @@
       "matchday": 1,
       "home": "ENG",
       "away": "CRO",
-      "date": null,
+      "date": "2026-06-17",
       "venue": null
     },
     {
@@ -806,7 +806,7 @@
       "matchday": 1,
       "home": "PAN",
       "away": "GHA",
-      "date": null,
+      "date": "2026-06-17",
       "venue": null
     },
     {
@@ -815,7 +815,7 @@
       "matchday": 2,
       "home": "ENG",
       "away": "PAN",
-      "date": null,
+      "date": "2026-06-27",
       "venue": null
     },
     {
@@ -824,7 +824,7 @@
       "matchday": 2,
       "home": "GHA",
       "away": "CRO",
-      "date": null,
+      "date": "2026-06-27",
       "venue": null
     },
     {
@@ -833,7 +833,7 @@
       "matchday": 3,
       "home": "GHA",
       "away": "ENG",
-      "date": null,
+      "date": "2026-06-23",
       "venue": null
     },
     {
@@ -842,7 +842,7 @@
       "matchday": 3,
       "home": "CRO",
       "away": "PAN",
-      "date": null,
+      "date": "2026-06-23",
       "venue": null
     }
   ]
