@@ -150,6 +150,7 @@ module AIWC26
         "away_code" => away_code,
         "home_name" => teams[home_code]["name"],
         "away_name" => teams[away_code]["name"],
+        "venue" => f["venue"],
         "ft_text" => ft_text,
         "ft_class" => ft_class,
         "disagree" => outcomes.length > 1,
@@ -164,12 +165,15 @@ module AIWC26
 
       f = pending.first
       when_label = f["date"] == today ? "TODAY" : f["date"] < today ? "OVERDUE" : f["date"]
+      transposed = f["actual_home"] && f["actual_home"] != f["home"]
+      home_code, away_code = transposed ? [f["away"], f["home"]] : [f["home"], f["away"]]
 
       {
         "group" => f["group"],
         "when" => when_label,
-        "home_name" => teams[f["home"]]["name"],
-        "away_name" => teams[f["away"]]["name"],
+        "home_name" => teams[home_code]["name"],
+        "away_name" => teams[away_code]["name"],
+        "venue" => f["venue"],
       }
     end
   end

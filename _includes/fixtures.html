@@ -14,7 +14,7 @@
         <tr id="fixture-{{ f.id }}" class="{% unless forloop.first %}sep{% endunless %}">
           <td>
             {% if f.disagree %}<span class="disagree" title="Models split on the result">◆</span>{% else %}<span class="disagree" style="visibility:hidden">◆</span>{% endif %}
-            <span style="color:var(--dim)">{{ f.id }}</span>
+            <abbr title="{{ f.venue | escape }}" style="color:var(--dim)">{{ f.id }}</abbr>
             <abbr title="{{ f.home_name | escape }}">{{ f.home_code }}</abbr> <span style="color:var(--dim)">v</span> <abbr title="{{ f.away_name | escape }}">{{ f.away_code }}</abbr>
           </td>
           <td class="num actual"><span class="{{ f.ft_class }}">{{ f.ft_text }}</span></td>

@@ -222,6 +222,7 @@
       <strong>NEXT UP — GRP {{ nm.group }}</strong><br>
       <span class="when">{{ nm.when }}</span><br>
       {{ nm.home_name | escape }} <span style="color:var(--dim)">v</span> {{ nm.away_name | escape }}
+      {% if nm.venue %}<br><span style="color:var(--dim)">{{ nm.venue | escape }}</span>{% endif %}
     {% else %}
       <strong>NEXT UP</strong><br>Schedule TBC
     {% endif %}
@@ -353,13 +354,21 @@
           when = (sameDay ? "TODAY " : "") + fmt.format(f.kickoff);
         }
 
-        const homeName = escapeHtml(teams[f.home].name);
-        const awayName = escapeHtml(teams[f.away].name);
+        const transposed = f.actual_home && f.actual_home !== f.home;
+        const homeCode = transposed ? f.away : f.home;
+        const awayCode = transposed ? f.home : f.away;
+        const homeName = escapeHtml(teams[homeCode].name);
+        const awayName = escapeHtml(teams[awayCode].name);
+
+        const venueLine = f.venue
+          ? `<br><span style="color:var(--dim)">${escapeHtml(f.venue)}</span>`
+          : "";
 
         nextMatchEl.innerHTML =
           `<strong>${live ? "LIVE" : "NEXT UP"} — GRP ${f.group}</strong><br>` +
           `<span class="when">${when}</span><br>` +
-          `${homeName} <span style="color:var(--dim)">v</span> ${awayName}`;
+          `${homeName} <span style="color:var(--dim)">v</span> ${awayName}` +
+          venueLine;
 
         nextMatchEl.dataset.fixtureId = f.id;
         nextMatchEl.setAttribute("role", "button");
