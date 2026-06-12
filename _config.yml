@@ -11,4 +11,5 @@ exclude:
   - Gemfile.lock
   - vendor
   - assets/generate-og-image.sh
+  - assets/generate-favicon.sh
   - assets/VT323-Regular.ttf
