@@ -3,8 +3,13 @@
 
 Usage:
   tools/results.py set <fixture_id> <home_score> <away_score>
+  tools/results.py set <fixture_id> <CODE>=<score> <CODE>=<score>
   tools/results.py unset <fixture_id>
   tools/results.py list
+
+The first form of "set" is canonical home-first, matching fixtures.json and
+the scoring prompt. The second form (CODE=score) is orientation-proof: the
+two team codes can be given in either order.
 """
 import json
 import sys
@@ -26,15 +31,37 @@ def save(path, doc):
 
 def cmd_set(args):
     if len(args) != 3:
-        sys.exit("usage: results.py set <fixture_id> <home_score> <away_score>")
-    fid, home_raw, away_raw = args
+        sys.exit(
+            "usage: results.py set <fixture_id> <home_score> <away_score>\n"
+            "   or: results.py set <fixture_id> <CODE>=<score> <CODE>=<score>"
+        )
+    fid, a, b = args
     fixtures = load(FIXTURES)
-    if fid not in {f["id"] for f in fixtures["fixtures"]}:
+    fixture = next((f for f in fixtures["fixtures"] if f["id"] == fid), None)
+    if fixture is None:
         sys.exit(f"unknown fixture id: {fid}")
-    try:
-        home, away = int(home_raw), int(away_raw)
-    except ValueError:
-        sys.exit("scores must be integers")
+
+    if "=" in a or "=" in b:
+        scores = {}
+        for arg in (a, b):
+            code, sep, score_raw = arg.partition("=")
+            if not sep:
+                sys.exit(f"invalid CODE=score argument: {arg}")
+            if code not in (fixture["home"], fixture["away"]):
+                sys.exit(f"{code} is not a team in fixture {fid}")
+            try:
+                scores[code] = int(score_raw)
+            except ValueError:
+                sys.exit("scores must be integers")
+        if set(scores) != {fixture["home"], fixture["away"]}:
+            sys.exit(f"expected scores for both {fixture['home']} and {fixture['away']}")
+        home, away = scores[fixture["home"]], scores[fixture["away"]]
+    else:
+        try:
+            home, away = int(a), int(b)
+        except ValueError:
+            sys.exit("scores must be integers")
+
     if home < 0 or away < 0:
         sys.exit("scores must be non-negative")
     doc = load(RESULTS)
@@ -60,8 +87,16 @@ def cmd_list(_args):
     results = load(RESULTS)["results"]
     for f in fixtures["fixtures"]:
         fid = f["id"]
-        home, away = teams[f["home"]]["name"], teams[f["away"]]["name"]
+        home_code, away_code = f["home"], f["away"]
         res = results.get(fid)
+
+        actual_home = f.get("actual_home")
+        if actual_home and actual_home != home_code:
+            home_code, away_code = away_code, home_code
+            if res:
+                res = {"home_score": res["away_score"], "away_score": res["home_score"]}
+
+        home, away = teams[home_code]["name"], teams[away_code]["name"]
         if res:
             print(f"{fid:4} {home} {res['home_score']}-{res['away_score']} {away}")
         else:

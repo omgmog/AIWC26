@@ -15,6 +15,8 @@ module AIWC26
       manifest = data["manifest"]["predictions"]
       predictions_dir = File.join(site.source, "_data", "predictions")
 
+      validate_actual_home!(fixtures)
+
       # Read prediction files directly by filename: Jekyll's _data loader
       # strips dots from keys (e.g. "gemini-1.5-pro.json" -> "gemini-15-pro"),
       # which would no longer match manifest.json's filenames.
@@ -42,8 +44,26 @@ module AIWC26
 
     private
 
+    def validate_actual_home!(fixtures)
+      fixtures.each do |f|
+        actual_home = f["actual_home"]
+        next unless actual_home
+        next if [f["home"], f["away"]].include?(actual_home)
+
+        raise "fixture #{f['id']}: actual_home #{actual_home.inspect} is not " \
+              "#{f['home']} or #{f['away']}"
+      end
+    end
+
     def outcome(home, away)
       home > away ? "H" : home < away ? "A" : "D"
+    end
+
+    # Flips a "h-a" score string to "a-h" for transposed display; leaves
+    # non-score placeholders (e.g. "—") untouched.
+    def flip_score(text)
+      m = text.match(/\A(\d+)-(\d+)\z/)
+      m ? "#{m[2]}-#{m[1]}" : text
     end
 
     # Mirrors scoreCell() from the original client-side renderer.
@@ -87,36 +107,54 @@ module AIWC26
     end
 
     def fixture_rows(models, fixtures, teams, results)
-      fixtures.map do |f|
-        res = results[f["id"]]
+      fixtures
+        .group_by { |f| f["group"] }
+        .flat_map { |_, group_fixtures| sort_fixtures(group_fixtures) }
+        .map { |f| fixture_row(f, models, teams, results) }
+    end
 
-        cells = models.map do |m|
-          pred = m["by_fixture"][f["id"]]
-          cell = score_cell(pred, res)
-          cell.merge("reasoning" => pred ? (pred["reasoning"] || "") : "")
-        end
+    def sort_fixtures(fixtures)
+      fixtures.sort_by { |f| [f["kickoff_utc"] ? 0 : 1, f["kickoff_utc"].to_s, f["id"]] }
+    end
 
-        outcomes = models.filter_map do |m|
-          pred = m["by_fixture"][f["id"]]
-          pred && outcome(pred["home_score"], pred["away_score"])
-        end.uniq
+    def fixture_row(f, models, teams, results)
+      res = results[f["id"]]
+      transposed = f["actual_home"] && f["actual_home"] != f["home"]
 
-        ft_text = res ? "#{res['home_score']}-#{res['away_score']} FT" : (f["date"] || "v")
-        ft_class = res ? "ft" : "noft"
-
-        {
-          "id" => f["id"],
-          "group" => f["group"],
-          "home_code" => f["home"],
-          "away_code" => f["away"],
-          "home_name" => teams[f["home"]]["name"],
-          "away_name" => teams[f["away"]]["name"],
-          "ft_text" => ft_text,
-          "ft_class" => ft_class,
-          "disagree" => outcomes.length > 1,
-          "cells" => cells,
-        }
+      cells = models.map do |m|
+        pred = m["by_fixture"][f["id"]]
+        cell = score_cell(pred, res)
+        cell = cell.merge("text" => flip_score(cell["text"])) if transposed
+        cell.merge("reasoning" => pred ? (pred["reasoning"] || "") : "")
       end
+
+      outcomes = models.filter_map do |m|
+        pred = m["by_fixture"][f["id"]]
+        pred && outcome(pred["home_score"], pred["away_score"])
+      end.uniq
+
+      if res
+        score_text = transposed ? "#{res['away_score']}-#{res['home_score']}" : "#{res['home_score']}-#{res['away_score']}"
+        ft_text = "#{score_text} FT"
+      else
+        ft_text = f["date"] || "v"
+      end
+      ft_class = res ? "ft" : "noft"
+
+      home_code, away_code = transposed ? [f["away"], f["home"]] : [f["home"], f["away"]]
+
+      {
+        "id" => f["id"],
+        "group" => f["group"],
+        "home_code" => home_code,
+        "away_code" => away_code,
+        "home_name" => teams[home_code]["name"],
+        "away_name" => teams[away_code]["name"],
+        "ft_text" => ft_text,
+        "ft_class" => ft_class,
+        "disagree" => outcomes.length > 1,
+        "cells" => cells,
+      }
     end
 
     def next_match(fixtures, teams, results, build_time)
