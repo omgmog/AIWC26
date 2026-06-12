@@ -377,6 +377,19 @@
 
       render();
       setInterval(render, 30000);
+
+      // by-date table: server-renders ET kickoffs, swap in the visitor's
+      // local date/time so it matches the next-match widget.
+      const dateFmt = new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric" });
+      const timeFmt = new Intl.DateTimeFormat(undefined, { hour: "2-digit", minute: "2-digit" });
+      const kickoffById = {};
+      scheduled.forEach(f => { kickoffById[f.id] = f.kickoff; });
+      document.querySelectorAll('#fixtures-by-date tr[id^="fixture-date-"]').forEach(row => {
+        const kickoff = kickoffById[row.id.slice("fixture-date-".length)];
+        const cell = row.querySelector("td");
+        if (!kickoff || !cell) return;
+        cell.innerHTML = `${dateFmt.format(kickoff)} <span style="color:var(--dim)">${timeFmt.format(kickoff)}</span>`;
+      });
     }).catch(() => {}); // leave server-rendered fallback in place
   }
 
@@ -393,6 +406,24 @@
       document.querySelectorAll(".group-section").forEach(sec => {
         sec.hidden = !(g === "ALL" || sec.dataset.group === g);
       });
+    });
+  }
+
+  // view toggle: switch between the grouped table and the flat by-date table
+  const viewnav = $("#viewnav");
+  const fixturesEl = $("#fixtures");
+  const fixturesByDateEl = $("#fixtures-by-date");
+  if (viewnav && fixturesEl && fixturesByDateEl) {
+    viewnav.hidden = false;
+    viewnav.addEventListener("click", e => {
+      const b = e.target.closest("button");
+      if (!b) return;
+      const view = b.dataset.view;
+      viewnav.querySelectorAll("button").forEach(btn =>
+        btn.setAttribute("aria-pressed", btn === b ? "true" : "false"));
+      fixturesEl.hidden = view !== "group";
+      fixturesByDateEl.hidden = view !== "date";
+      if (nav) nav.hidden = view !== "group";
     });
   }
 })();

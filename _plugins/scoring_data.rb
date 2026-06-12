@@ -33,11 +33,14 @@ module AIWC26
         }
       end
 
+      fixtures_grouped, fixtures_by_date = fixture_rows(models, fixtures, teams, results)
+
       site.data["computed"] = {
         "models" => models,
         "leaderboard" => leaderboard(models, fixtures, results),
         "groups" => fixtures.map { |f| f["group"] }.uniq,
-        "fixtures" => fixture_rows(models, fixtures, teams, results),
+        "fixtures" => fixtures_grouped,
+        "fixtures_by_date" => fixtures_by_date,
         "next_match" => next_match(fixtures, teams, results, site.time),
       }
     end
@@ -107,10 +110,18 @@ module AIWC26
     end
 
     def fixture_rows(models, fixtures, teams, results)
-      fixtures
+      rows_by_id = fixtures.to_h { |f| [f["id"], fixture_row(f, models, teams, results)] }
+
+      grouped = fixtures
         .group_by { |f| f["group"] }
         .flat_map { |_, group_fixtures| sort_fixtures(group_fixtures) }
-        .map { |f| fixture_row(f, models, teams, results) }
+        .map { |f| rows_by_id[f["id"]] }
+
+      by_date = fixtures
+        .sort_by { |f| [f["date"].to_s, f["time"].to_s, f["id"]] }
+        .map { |f| rows_by_id[f["id"]] }
+
+      [grouped, by_date]
     end
 
     def sort_fixtures(fixtures)
@@ -146,6 +157,8 @@ module AIWC26
       {
         "id" => f["id"],
         "group" => f["group"],
+        "date" => f["date"],
+        "time" => f["time"],
         "home_code" => home_code,
         "away_code" => away_code,
         "home_name" => teams[home_code]["name"],
