@@ -4,6 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ site.title }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/og-image.png' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.title }}">
+<meta name="twitter:description" content="{{ site.description }}">
+<meta name="twitter:image" content="{{ '/assets/og-image.png' | absolute_url }}">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
@@ -281,31 +298,38 @@
       const teams = fixturesData.teams;
       const results = resultsData.results || {};
 
-      const upcoming = fixturesData.fixtures
-        .filter(f => f.date && f.time && !results[f.id])
+      const scheduled = fixturesData.fixtures
+        .filter(f => f.date && f.time)
         .map(f => ({ ...f, kickoff: new Date(`${f.date}T${f.time}:00-04:00`) }))
         .sort((a, b) => a.kickoff - b.kickoff);
 
       function render() {
-        if (upcoming.length === 0) {
-          nextMatchEl.innerHTML = "<strong>NEXT UP</strong><br>Schedule TBC";
+        const now = new Date();
+
+        // a fixture drops out once its result is known, or once its ~125min
+        // window has elapsed, even if results.json hasn't caught up yet —
+        // this stops the widget getting stuck on "OVERDUE" between matches.
+        const candidates = scheduled.filter(f =>
+          !results[f.id] && now < new Date(f.kickoff.getTime() + MATCH_DURATION_MS));
+
+        if (candidates.length === 0) {
+          nextMatchEl.innerHTML = scheduled.length === 0
+            ? "<strong>NEXT UP</strong><br>Schedule TBC"
+            : "<strong>GROUP STAGE</strong><br>All matches played";
           delete nextMatchEl.dataset.fixtureId;
           nextMatchEl.removeAttribute("role");
           nextMatchEl.removeAttribute("tabindex");
           return;
         }
 
-        const now = new Date();
-        const live = upcoming.find(f =>
+        const live = candidates.find(f =>
           f.kickoff <= now && now < new Date(f.kickoff.getTime() + MATCH_DURATION_MS));
-        const f = live || upcoming.find(f => f.kickoff > now) || upcoming[upcoming.length - 1];
+        const f = live || candidates.find(f => f.kickoff > now) || candidates[candidates.length - 1];
 
         let when;
         const minsToKickoff = Math.round((f.kickoff - now) / 60000);
         if (live) {
           when = "LIVE NOW";
-        } else if (f.kickoff < now) {
-          when = "OVERDUE";
         } else if (minsToKickoff < 60) {
           when = `in ${minsToKickoff} min`;
         } else if (minsToKickoff < 6 * 60) {
