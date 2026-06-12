@@ -78,6 +78,7 @@
   @keyframes blink { 50% { opacity: 0; } }
   @media (prefers-reduced-motion: reduce) {
     header.ttx .clock::after { animation: none; }
+    .live { animation: none; }
   }
 
   h1.banner {
@@ -164,6 +165,7 @@
   .p-pending { color: var(--ink); }
   .ft        { color: var(--yellow); }
   .noft      { color: var(--dim); }
+  .live      { color: var(--red); animation: blink 1s steps(1) infinite; }
   .disagree  { color: var(--yellow); }
   abbr { text-decoration: none; }
 
@@ -318,8 +320,42 @@
         .map(f => ({ ...f, kickoff: new Date(`${f.date}T${f.time}:00-04:00`) }))
         .sort((a, b) => a.kickoff - b.kickoff);
 
+      // table rows currently showing "LIVE" instead of their date, keyed by
+      // fixture id, so we can restore the original cell once a match ends.
+      const liveCells = new Map();
+
+      function updateLiveRows(liveIds) {
+        const liveSet = new Set(liveIds);
+
+        for (const [id, cells] of liveCells) {
+          if (liveSet.has(id)) continue;
+          cells.forEach(({ cell, html, className }) => {
+            cell.innerHTML = html;
+            cell.className = className;
+          });
+          liveCells.delete(id);
+        }
+
+        liveSet.forEach(id => {
+          if (liveCells.has(id)) return;
+          const cells = [`fixture-${id}`, `fixture-date-${id}`].flatMap(rowId => {
+            const cell = document.getElementById(rowId)?.querySelector("td.actual");
+            return cell ? [{ cell, html: cell.innerHTML, className: cell.className }] : [];
+          });
+          cells.forEach(({ cell }) => {
+            cell.innerHTML = '<span class="live">LIVE</span>';
+            cell.className = "num actual";
+          });
+          if (cells.length) liveCells.set(id, cells);
+        });
+      }
+
       function render() {
         const now = new Date();
+
+        updateLiveRows(scheduled
+          .filter(f => !results[f.id] && f.kickoff <= now && now < new Date(f.kickoff.getTime() + MATCH_DURATION_MS))
+          .map(f => f.id));
 
         // a fixture drops out once its result is known, or once its ~125min
         // window has elapsed, even if results.json hasn't caught up yet —
