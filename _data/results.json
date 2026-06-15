@@ -48,6 +48,10 @@
     "F2": {
       "home_score": 5,
       "away_score": 1
+    },
+    "H1": {
+      "home_score": 0,
+      "away_score": 0
     }
   }
 }
