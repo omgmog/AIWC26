@@ -114,7 +114,7 @@ module AIWC26
 
       grouped = fixtures
         .group_by { |f| f["group"] }
-        .flat_map { |_, group_fixtures| sort_fixtures(group_fixtures) }
+        .flat_map { |_, group_fixtures| sort_fixtures(group_fixtures, results) }
         .map { |f| rows_by_id[f["id"]] }
 
       by_date = fixtures
@@ -124,8 +124,8 @@ module AIWC26
       [grouped, by_date]
     end
 
-    def sort_fixtures(fixtures)
-      fixtures.sort_by { |f| [f["kickoff_utc"] ? 0 : 1, f["kickoff_utc"].to_s, f["id"]] }
+    def sort_fixtures(fixtures, results)
+      fixtures.sort_by { |f| [results[f["id"]] ? 0 : 1, f["date"].to_s, f["time"].to_s, f["id"]] }
     end
 
     def fixture_row(f, models, teams, results)
