@@ -6,19 +6,22 @@ Usage:
   tools/results.py set <fixture_id> <CODE>=<score> <CODE>=<score>
   tools/results.py unset <fixture_id>
   tools/results.py list
-
-The first form of "set" is canonical home-first, matching fixtures.json and
-the scoring prompt. The second form (CODE=score) is orientation-proof: the
-two team codes can be given in either order.
+  tools/results.py sync [--dry-run]
 """
 import json
 import sys
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "_data"
 FIXTURES = DATA / "fixtures.json"
 RESULTS = DATA / "results.json"
+
+FIFA_API = (
+    "https://api.fifa.com/api/v3/calendar/matches"
+    "?language=en&count=500&idSeason=285023"
+)
 
 
 def load(path):
@@ -103,7 +106,77 @@ def cmd_list(_args):
             print(f"{fid:4} {home} v {away}  (pending)")
 
 
-COMMANDS = {"set": cmd_set, "unset": cmd_unset, "list": cmd_list}
+def fetch_fifa_results():
+    req = urllib.request.Request(FIFA_API, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=15) as r:
+        return json.loads(r.read())
+
+
+def cmd_sync(args):
+    dry_run = "--dry-run" in args
+
+    fixtures = load(FIXTURES)
+    # Build lookup: frozenset({home, away}) -> fixture
+    by_teams = {frozenset([f["home"], f["away"]]): f for f in fixtures["fixtures"]}
+
+    print("Fetching from FIFA API...", flush=True)
+    data = fetch_fifa_results()
+
+    doc = load(RESULTS)
+    results = doc["results"]
+
+    added, updated, skipped = [], [], []
+
+    for match in data["Results"]:
+        if not match.get("Home") or not match.get("Away"):
+            continue
+        if match.get("HomeTeamScore") is None or match.get("AwayTeamScore") is None:
+            continue
+
+        fifa_home = match["Home"]["Abbreviation"]
+        fifa_away = match["Away"]["Abbreviation"]
+        fifa_home_score = match["HomeTeamScore"]
+        fifa_away_score = match["AwayTeamScore"]
+
+        key = frozenset([fifa_home, fifa_away])
+        fixture = by_teams.get(key)
+        if fixture is None:
+            continue  # knockout or unknown
+
+        fid = fixture["id"]
+
+        # Orient scores to our fixture's home/away
+        if fifa_home == fixture["home"]:
+            home_score, away_score = fifa_home_score, fifa_away_score
+        else:
+            home_score, away_score = fifa_away_score, fifa_home_score
+
+        existing = results.get(fid)
+        new_entry = {"home_score": home_score, "away_score": away_score}
+
+        if existing == new_entry:
+            skipped.append(fid)
+        elif existing is None:
+            added.append(fid)
+            if not dry_run:
+                results[fid] = new_entry
+            print(f"  ADD  {fid}: {home_score}-{away_score}")
+        else:
+            updated.append(fid)
+            if not dry_run:
+                results[fid] = new_entry
+            print(f"  UPD  {fid}: {existing['home_score']}-{existing['away_score']} -> {home_score}-{away_score}")
+
+    if not dry_run and (added or updated):
+        save(RESULTS, doc)
+
+    print(
+        f"\n{'[dry-run] ' if dry_run else ''}"
+        f"{len(added)} added, {len(updated)} updated, {len(skipped)} unchanged"
+    )
+
+
+COMMANDS = {"set": cmd_set, "unset": cmd_unset, "list": cmd_list, "sync": cmd_sync}
 
 
 def main():
