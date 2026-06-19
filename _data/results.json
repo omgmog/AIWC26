@@ -100,6 +100,10 @@
     "A4": {
       "home_score": 1,
       "away_score": 1
+    },
+    "B4": {
+      "home_score": 1,
+      "away_score": 4
     }
   }
 }
