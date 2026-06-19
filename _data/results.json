@@ -104,6 +104,10 @@
     "B4": {
       "home_score": 1,
       "away_score": 4
+    },
+    "B3": {
+      "home_score": 6,
+      "away_score": 0
     }
   }
 }
