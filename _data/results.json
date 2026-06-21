@@ -140,6 +140,10 @@
     "E4": {
       "home_score": 0,
       "away_score": 0
+    },
+    "F4": {
+      "home_score": 0,
+      "away_score": 4
     }
   }
 }
