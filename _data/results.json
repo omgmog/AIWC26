@@ -148,6 +148,10 @@
     "H3": {
       "home_score": 4,
       "away_score": 0
+    },
+    "G3": {
+      "home_score": 0,
+      "away_score": 0
     }
   }
 }
