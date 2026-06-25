@@ -200,6 +200,10 @@
     "B1": {
       "home_score": 1,
       "away_score": 2
+    },
+    "C6": {
+      "home_score": 4,
+      "away_score": 2
     }
   }
 }
