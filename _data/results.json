@@ -260,6 +260,10 @@
     "G5": {
       "home_score": 1,
       "away_score": 5
+    },
+    "G6": {
+      "home_score": 1,
+      "away_score": 1
     }
   }
 }
