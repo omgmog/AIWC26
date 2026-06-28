@@ -1,0 +1,25 @@
+{
+  "model": "Claude Opus 4.8",
+  "provider": "Anthropic",
+  "generated": "2026-06-28",
+  "round": "R32",
+  "method_notes": "Weighted final group standings heavily for clear mismatches (winners vs third-placed sides) and leaned on goal difference, goals conceded, and knockout pedigree for the closer runner-up/third-placed ties. Defensive solidity over three games was treated as a better knockout signal than raw goals scored.",
+  "predictions": [
+    {"fixture_id": "R32-1", "winner": "GER", "home_score": 2, "away_score": 0, "confidence": 0.80, "reasoning": "Germany topped their group scoring 10; Paraguay scraped through third with a negative GD."},
+    {"fixture_id": "R32-2", "winner": "FRA", "home_score": 2, "away_score": 0, "confidence": 0.82, "reasoning": "France were the tournament's most dominant group winner (GD+8); Sweden's defence leaked 7."},
+    {"fixture_id": "R32-3", "winner": "CAN", "home_score": 1, "away_score": 2, "confidence": 0.60, "reasoning": "Canada's GD+5 and eight goals outweigh South Africa's negative-GD second place, plus co-host edge."},
+    {"fixture_id": "R32-4", "winner": "NED", "home_score": 2, "away_score": 1, "confidence": 0.57, "reasoning": "Netherlands' attack (10 goals) shades a dangerous, well-drilled Morocco with strong knockout pedigree."},
+    {"fixture_id": "R32-5", "winner": "POR", "home_score": 2, "away_score": 1, "confidence": 0.55, "reasoning": "Portugal conceded just once in the group; Croatia's tournament nous keeps it tight."},
+    {"fixture_id": "R32-6", "winner": "ESP", "home_score": 2, "away_score": 0, "confidence": 0.82, "reasoning": "Spain won their group without conceding; Austria were a level 6-6 in theirs."},
+    {"fixture_id": "R32-7", "winner": "USA", "home_score": 2, "away_score": 1, "confidence": 0.64, "reasoning": "Co-hosts won their group scoring eight; Bosnia qualified third on a negative GD."},
+    {"fixture_id": "R32-8", "winner": "BEL", "home_score": 2, "away_score": 1, "confidence": 0.56, "reasoning": "Belgium more defensively solid; Senegal scored freely but shipped six as a third-placed side."},
+    {"fixture_id": "R32-9", "winner": "BRA", "home_score": 2, "away_score": 1, "confidence": 0.66, "reasoning": "Brazil's depth should tell over a Japan side that remains a genuine threat."},
+    {"fixture_id": "R32-10", "winner": "CIV", "home_score": 2, "away_score": 1, "confidence": 0.52, "reasoning": "Coin-flip; Ivory Coast's two goals conceded edge Norway's leaky 8-7 despite Norway's individual quality."},
+    {"fixture_id": "R32-11", "winner": "MEX", "home_score": 2, "away_score": 0, "confidence": 0.72, "reasoning": "Mexico won their group 6-0 at home; Ecuador qualified third on a level record."},
+    {"fixture_id": "R32-12", "winner": "ENG", "home_score": 2, "away_score": 0, "confidence": 0.77, "reasoning": "England comfortable group winners; DR Congo a third-placed side with marginal GD."},
+    {"fixture_id": "R32-13", "winner": "ARG", "home_score": 3, "away_score": 0, "confidence": 0.88, "reasoning": "Holders won their group 8-1; Cape Verde the clear underdog."},
+    {"fixture_id": "R32-14", "winner": "EGY", "home_score": 1, "away_score": 2, "confidence": 0.57, "reasoning": "Egypt's better GD and cutting edge edge a level Australia side."},
+    {"fixture_id": "R32-15", "winner": "SUI", "home_score": 2, "away_score": 1, "confidence": 0.65, "reasoning": "Switzerland topped their group; Algeria third on a negative GD."},
+    {"fixture_id": "R32-16", "winner": "COL", "home_score": 2, "away_score": 0, "confidence": 0.69, "reasoning": "Colombia conceded once winning their group; Ghana through third on a level record."}
+  ]
+}

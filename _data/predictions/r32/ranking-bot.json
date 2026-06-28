@@ -1,0 +1,137 @@
+{
+  "model": "Ranking Bot",
+  "provider": "FIFA rankings + one rule",
+  "generated": "2026-06-10",
+  "method_notes": "Deterministic baseline. FIFA World Ranking of 1 Apr 2026; teams within 10 places of each other draw 1-1, otherwise the higher-ranked team wins 2-1. No model, no judgement. For the winner pick, a drawn scoreline goes to the higher-ranked side.",
+  "predictions": [
+    {
+      "winner": "GER",
+      "fixture_id": "R32-1",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "GER ranked 10, PAR ranked 40, gap 30: GER win."
+    },
+    {
+      "winner": "FRA",
+      "fixture_id": "R32-2",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "FRA ranked 1, SWE ranked 38, gap 37: FRA win."
+    },
+    {
+      "winner": "CAN",
+      "fixture_id": "R32-3",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "RSA ranked 60, CAN ranked 30, gap 30: CAN win."
+    },
+    {
+      "winner": "NED",
+      "fixture_id": "R32-4",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "NED ranked 7, MAR ranked 8, gap 1: draw. Tie-break: higher-ranked NED progresses."
+    },
+    {
+      "winner": "POR",
+      "fixture_id": "R32-5",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "POR ranked 5, CRO ranked 11, gap 6: draw. Tie-break: higher-ranked POR progresses."
+    },
+    {
+      "winner": "ESP",
+      "fixture_id": "R32-6",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ESP ranked 2, AUT ranked 24, gap 22: ESP win."
+    },
+    {
+      "winner": "USA",
+      "fixture_id": "R32-7",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "USA ranked 16, BIH ranked 65, gap 49: USA win."
+    },
+    {
+      "winner": "BEL",
+      "fixture_id": "R32-8",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "BEL ranked 9, SEN ranked 14, gap 5: draw. Tie-break: higher-ranked BEL progresses."
+    },
+    {
+      "winner": "BRA",
+      "fixture_id": "R32-9",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "BRA ranked 6, JPN ranked 18, gap 12: BRA win."
+    },
+    {
+      "winner": "NOR",
+      "fixture_id": "R32-10",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "CIV ranked 34, NOR ranked 31, gap 3: draw. Tie-break: higher-ranked NOR progresses."
+    },
+    {
+      "winner": "MEX",
+      "fixture_id": "R32-11",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "MEX ranked 15, ECU ranked 23, gap 8: draw. Tie-break: higher-ranked MEX progresses."
+    },
+    {
+      "winner": "ENG",
+      "fixture_id": "R32-12",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ENG ranked 4, COD ranked 46, gap 42: ENG win."
+    },
+    {
+      "winner": "ARG",
+      "fixture_id": "R32-13",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ARG ranked 3, CPV ranked 69, gap 66: ARG win."
+    },
+    {
+      "winner": "AUS",
+      "fixture_id": "R32-14",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "AUS ranked 27, EGY ranked 29, gap 2: draw. Tie-break: higher-ranked AUS progresses."
+    },
+    {
+      "winner": "SUI",
+      "fixture_id": "R32-15",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "SUI ranked 19, ALG ranked 28, gap 9: draw. Tie-break: higher-ranked SUI progresses."
+    },
+    {
+      "winner": "COL",
+      "fixture_id": "R32-16",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "COL ranked 13, GHA ranked 74, gap 61: COL win."
+    }
+  ],
+  "round": "R32"
+}

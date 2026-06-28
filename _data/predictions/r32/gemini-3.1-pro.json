@@ -1,0 +1,137 @@
+{
+"model": "Gemini 3.1 Pro",
+"provider": "Google",
+"generated": "2026-06-28",
+"round": "R32",
+"method_notes": "Predictions are primarily driven by goal difference and defensive stability from the group stage, weighted alongside historical knockout experience and squad depth to project winners and 90-minute scorelines.",
+"predictions": [
+{
+"fixture_id": "R32-1",
+"winner": "GER",
+"home_score": 3,
+"away_score": 1,
+"confidence": 0.85,
+"reasoning": "Germany's potent attack will likely overpower a resilient but heavily outmatched Paraguayan defense."
+},
+{
+"fixture_id": "R32-2",
+"winner": "FRA",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.88,
+"reasoning": "France possesses vastly superior squad depth and tactical structure compared to Sweden."
+},
+{
+"fixture_id": "R32-3",
+"winner": "CAN",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.65,
+"reasoning": "Canada's high-scoring group stage momentum gives them the offensive edge over South Africa."
+},
+{
+"fixture_id": "R32-4",
+"winner": "NED",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.60,
+"reasoning": "The Netherlands will narrowly edge out Morocco in a highly technical and closely fought encounter."
+},
+{
+"fixture_id": "R32-5",
+"winner": "POR",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.55,
+"reasoning": "Portugal is expected to advance past Croatia via extra time or penalties after a tight regular-time stalemate."
+},
+{
+"fixture_id": "R32-6",
+"winner": "ESP",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.85,
+"reasoning": "Spain's flawless group stage defensive record should remain intact against a capable Austria side."
+},
+{
+"fixture_id": "R32-7",
+"winner": "USA",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.70,
+"reasoning": "The United States utilizes home-field advantage and superior attacking options to secure the win."
+},
+{
+"fixture_id": "R32-8",
+"winner": "BEL",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.62,
+"reasoning": "Belgium's experienced midfield core will control the tempo against a dangerous Senegal squad."
+},
+{
+"fixture_id": "R32-9",
+"winner": "BRA",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.75,
+"reasoning": "Brazil's elite talent and depth should prove decisive against an energetic Japanese team."
+},
+{
+"fixture_id": "R32-10",
+"winner": "CIV",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.52,
+"reasoning": "Ivory Coast is predicted to progress past Norway after a highly physical draw in regular time."
+},
+{
+"fixture_id": "R32-11",
+"winner": "MEX",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.80,
+"reasoning": "Mexico continues their perfect tournament momentum backed by a solid defensive foundation."
+},
+{
+"fixture_id": "R32-12",
+"winner": "ENG",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.85,
+"reasoning": "England's defensive solidity and major tournament pedigree should see them comfortably past DR Congo."
+},
+{
+"fixture_id": "R32-13",
+"winner": "ARG",
+"home_score": 3,
+"away_score": 0,
+"confidence": 0.92,
+"reasoning": "Argentina's dominant attack is expected to effortlessly dismantle Cape Verde's defense."
+},
+{
+"fixture_id": "R32-14",
+"winner": "EGY",
+"home_score": 0,
+"away_score": 1,
+"confidence": 0.58,
+"reasoning": "Egypt relies on their rigid defensive structure to squeak out a narrow victory over Australia."
+},
+{
+"fixture_id": "R32-15",
+"winner": "SUI",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.72,
+"reasoning": "Switzerland's strong group stage form translates effectively into a professional knockout-round performance."
+},
+{
+"fixture_id": "R32-16",
+"winner": "COL",
+"home_score": 1,
+"away_score": 0,
+"confidence": 0.68,
+"reasoning": "Colombia's disciplined backline will prevent Ghana from establishing any consistent threat."
+}
+]
+}

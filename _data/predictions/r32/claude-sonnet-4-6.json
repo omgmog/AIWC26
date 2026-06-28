@@ -1,0 +1,18 @@
+{"model": "Claude Sonnet 4.6", "provider": "Anthropic", "generated": "2026-06-28", "round": "R32", "method_notes": "Weighted group-stage points/GF-GA as primary signal, adjusted for historical knockout pedigree and squad depth where group performance was close.", "predictions": [
+{"fixture_id": "R32-1", "winner": "GER", "home_score": 2, "away_score": 0, "confidence": 0.82, "reasoning": "Germany's group GD and pedigree clearly outclass Paraguay."},
+{"fixture_id": "R32-2", "winner": "FRA", "home_score": 3, "away_score": 1, "confidence": 0.88, "reasoning": "France were the standout group team; Sweden limped through as a weak third."},
+{"fixture_id": "R32-3", "winner": "CAN", "home_score": 1, "away_score": 2, "confidence": 0.6, "reasoning": "Canada's stronger attack and GD edge South Africa in a close tie."},
+{"fixture_id": "R32-4", "winner": "NED", "home_score": 2, "away_score": 1, "confidence": 0.62, "reasoning": "Netherlands' superior GD and depth give them the edge over a solid Morocco."},
+{"fixture_id": "R32-5", "winner": "POR", "home_score": 2, "away_score": 1, "confidence": 0.58, "reasoning": "Portugal's better GD and quality edge a tough Croatia side."},
+{"fixture_id": "R32-6", "winner": "ESP", "home_score": 3, "away_score": 0, "confidence": 0.85, "reasoning": "Spain were dominant and unbeaten with a clean defensive record in the group."},
+{"fixture_id": "R32-7", "winner": "USA", "home_score": 2, "away_score": 1, "confidence": 0.65, "reasoning": "USA's stronger group form and home advantage edge Bosnia."},
+{"fixture_id": "R32-8", "winner": "BEL", "home_score": 2, "away_score": 1, "confidence": 0.55, "reasoning": "Belgium's slight edge in GD over a dangerous Senegal side."},
+{"fixture_id": "R32-9", "winner": "BRA", "home_score": 2, "away_score": 0, "confidence": 0.78, "reasoning": "Brazil's pedigree and stronger GD favour them over Japan."},
+{"fixture_id": "R32-10", "winner": "CIV", "home_score": 1, "away_score": 0, "confidence": 0.52, "reasoning": "Ivory Coast's tighter group and defensive solidity edge a high-scoring Norway."},
+{"fixture_id": "R32-11", "winner": "MEX", "home_score": 2, "away_score": 0, "confidence": 0.8, "reasoning": "Mexico dominated their group; Ecuador scraped through as a weak third."},
+{"fixture_id": "R32-12", "winner": "ENG", "home_score": 2, "away_score": 0, "confidence": 0.78, "reasoning": "England's superior group form and GD favour them clearly over DR Congo."},
+{"fixture_id": "R32-13", "winner": "ARG", "home_score": 3, "away_score": 0, "confidence": 0.9, "reasoning": "Argentina were the strongest team in the draw against a weak Cape Verde."},
+{"fixture_id": "R32-14", "winner": "EGY", "home_score": 1, "away_score": 1, "confidence": 0.52, "reasoning": "Egypt's slightly better GD edges an even Australia side after a close 90 minutes."},
+{"fixture_id": "R32-15", "winner": "SUI", "home_score": 2, "away_score": 1, "confidence": 0.6, "reasoning": "Switzerland's group win and balance edge Algeria."},
+{"fixture_id": "R32-16", "winner": "COL", "home_score": 2, "away_score": 0, "confidence": 0.7, "reasoning": "Colombia's clean group form favours them over Ghana."}
+]}
