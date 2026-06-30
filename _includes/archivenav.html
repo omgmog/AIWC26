@@ -1,0 +1,11 @@
+{% assign archived = "" | split: "" %}
+{% for key in site.data.computed.stages %}
+  {% unless key[0] == site.data.computed.current_stage %}
+    {% assign archived = archived | push: key[1] %}
+  {% endunless %}
+{% endfor %}
+{% if archived.size > 0 %}
+<p class="legend">Archived:
+  {% for stage in archived %}<a href="{{ '/archive/' | append: stage.key | append: '/' | relative_url }}">{{ stage.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
+</p>
+{% endif %}

@@ -14,33 +14,83 @@ module AIWC26
       results = data["results"]["results"] || {}
       manifest = data["manifest"]["predictions"]
       predictions_dir = File.join(site.source, "_data", "predictions")
+      stage_defs = data["fixtures"]["stages"]
 
       validate_actual_home!(fixtures)
+      validate_knockout_winners!(fixtures, results)
 
       # Read prediction files directly by filename: Jekyll's _data loader
       # strips dots from keys (e.g. "gemini-1.5-pro.json" -> "gemini-15-pro"),
-      # which would no longer match manifest.json's filenames.
+      # which would no longer match manifest.json's filenames. The group
+      # stage's predictions live at the top level (_data/predictions/<file>);
+      # every later stage's predictions live in their own subfolder
+      # (_data/predictions/<stage>/<file>) since each round is a fresh,
+      # immutable prompt sent after the previous round's results are known.
+      # The root file is optional: a model that joins mid-tournament (e.g.
+      # replacing one that's no longer available) may only have stage files.
       models = manifest.map do |filename|
-        entry = JSON.parse(File.read(File.join(predictions_dir, filename)))
+        paths = [File.join(predictions_dir, filename)]
+        stage_defs.each do |stage_def|
+          next if stage_def["key"] == "group"
+          paths << File.join(predictions_dir, stage_def["key"], filename)
+        end
+        entries = paths.select { |p| File.exist?(p) }.map { |p| JSON.parse(File.read(p)) }
+        raise "no prediction files found for #{filename}" if entries.empty?
+
         by_fixture = {}
-        entry["predictions"].each { |p| by_fixture[p["fixture_id"]] = p }
+        entries.each { |e| e["predictions"].each { |p| by_fixture[p["fixture_id"]] = p } }
+        meta = entries.first
+
         {
-          "model" => entry["model"],
-          "provider" => entry["provider"],
-          "generated" => entry["generated"],
-          "method_notes" => entry["method_notes"],
+          "model" => meta["model"],
+          "provider" => meta["provider"],
+          "generated" => meta["generated"],
+          "method_notes" => meta["method_notes"],
           "by_fixture" => by_fixture,
         }
       end
 
-      fixtures_grouped, fixtures_by_date = fixture_rows(models, fixtures, teams, results)
+      fixtures_by_stage = fixtures.group_by { |f| f["stage"] }
+
+      seen_fixtures = []
+      stages = {}
+      current_stage = nil
+
+      stage_defs.each do |stage_def|
+        key = stage_def["key"]
+        stage_fixtures = fixtures_by_stage[key] || []
+        next if stage_fixtures.empty?
+
+        seen_fixtures += stage_fixtures
+
+        # Drop models with no predictions at all for this stage (e.g. a
+        # model retired between rounds) so they don't show an all-dashes
+        # column or sit frozen at 0pts looking like they predicted every
+        # fixture wrong.
+        stage_models = models.select { |m| stage_fixtures.any? { |f| m["by_fixture"].key?(f["id"]) } }
+
+        grouped, by_date = fixture_rows(stage_models, stage_fixtures, teams, results)
+
+        stages[key] = {
+          "key" => key,
+          "label" => stage_def["label"],
+          "groups" => stage_fixtures.map { |f| f["group"] }.uniq,
+          "models" => stage_models,
+          "fixtures" => grouped,
+          "fixtures_by_date" => by_date,
+          "leaderboard" => leaderboard(stage_models, stage_fixtures, results),
+          "leaderboard_through" => leaderboard(stage_models, seen_fixtures, results),
+        }
+
+        pending = stage_fixtures.any? { |f| !results[f["id"]] }
+        current_stage ||= key if pending
+      end
+      current_stage ||= stages.keys.last
 
       site.data["computed"] = {
         "models" => models,
-        "leaderboard" => leaderboard(models, fixtures, results),
-        "groups" => fixtures.map { |f| f["group"] }.uniq,
-        "fixtures" => fixtures_grouped,
-        "fixtures_by_date" => fixtures_by_date,
+        "current_stage" => current_stage,
+        "stages" => stages,
         "next_match" => next_match(fixtures, teams, results, site.time),
       }
     end
@@ -62,6 +112,24 @@ module AIWC26
       home > away ? "H" : home < away ? "A" : "D"
     end
 
+    # Knockout fixtures can't end level: a draw after 90 minutes goes to
+    # extra time, then penalties. results.json records the 90-minute score
+    # plus an explicit "winner" (who actually went through), since that
+    # can't always be derived from the scoreline alone.
+    def validate_knockout_winners!(fixtures, results)
+      fixtures.each do |f|
+        next if f["stage"] == "group"
+        res = results[f["id"]]
+        next unless res
+
+        winner = res["winner"]
+        next if [f["home"], f["away"]].include?(winner)
+
+        raise "fixture #{f['id']}: knockout result needs a \"winner\" matching " \
+              "#{f['home']} or #{f['away']}, got #{winner.inspect}"
+      end
+    end
+
     # Flips a "h-a" score string to "a-h" for transposed display; leaves
     # non-score placeholders (e.g. "—") untouched.
     def flip_score(text)
@@ -69,36 +137,49 @@ module AIWC26
       m ? "#{m[2]}-#{m[1]}" : text
     end
 
-    # Mirrors scoreCell() from the original client-side renderer.
-    def score_cell(pred, res)
+    # Mirrors scoreCell() from the original client-side renderer. Group
+    # fixtures score on the 90-minute result (3/1/0); knockout fixtures
+    # score on the winner pick plus a bonus for the exact 90-minute
+    # scoreline (3/2/0), since a draw at 90 minutes is still a valid
+    # scoreline prediction but isn't itself the outcome that matters.
+    def score_cell(pred, res, f)
       return { "cls" => "noft", "text" => "—", "pts" => nil } unless pred
 
       text = "#{pred['home_score']}-#{pred['away_score']}"
       return { "cls" => "p-pending", "text" => text, "pts" => nil } unless res
 
-      if pred["home_score"] == res["home_score"] && pred["away_score"] == res["away_score"]
-        { "cls" => "p-exact", "text" => text, "pts" => 3 }
-      elsif outcome(pred["home_score"], pred["away_score"]) == outcome(res["home_score"], res["away_score"])
-        { "cls" => "p-result", "text" => text, "pts" => 1 }
-      else
+      if f["stage"] == "group"
+        if pred["home_score"] == res["home_score"] && pred["away_score"] == res["away_score"]
+          { "cls" => "p-exact", "text" => text, "pts" => 3 }
+        elsif outcome(pred["home_score"], pred["away_score"]) == outcome(res["home_score"], res["away_score"])
+          { "cls" => "p-result", "text" => text, "pts" => 1 }
+        else
+          { "cls" => "p-wrong", "text" => text, "pts" => 0 }
+        end
+      elsif pred["winner"] != res["winner"]
         { "cls" => "p-wrong", "text" => text, "pts" => 0 }
+      elsif pred["home_score"] == res["home_score"] && pred["away_score"] == res["away_score"]
+        { "cls" => "p-exact", "text" => text, "pts" => 3 }
+      else
+        { "cls" => "p-result", "text" => text, "pts" => 2 }
       end
     end
 
     def leaderboard(models, fixtures, results)
-      tally = models.map { |m| { "model" => m, "scored" => 0, "exact" => 0, "result" => 0, "pts" => 0 } }
+      tally = models.map { |m| { "model" => m, "scored" => 0, "exact" => 0, "winner" => 0, "result" => 0, "pts" => 0 } }
 
       fixtures.each do |f|
         res = results[f["id"]]
         next unless res
 
         tally.each do |t|
-          cell = score_cell(t["model"]["by_fixture"][f["id"]], res)
+          cell = score_cell(t["model"]["by_fixture"][f["id"]], res, f)
           next if cell["pts"].nil?
 
           t["scored"] += 1
           case cell["pts"]
           when 3 then t["exact"] += 1; t["pts"] += 3
+          when 2 then t["winner"] += 1; t["pts"] += 2
           when 1 then t["result"] += 1; t["pts"] += 1
           end
         end
@@ -134,19 +215,30 @@ module AIWC26
 
       cells = models.map do |m|
         pred = m["by_fixture"][f["id"]]
-        cell = score_cell(pred, res)
+        cell = score_cell(pred, res, f)
         cell = cell.merge("text" => flip_score(cell["text"])) if transposed
         cell.merge("reasoning" => pred ? (pred["reasoning"] || "") : "")
       end
 
       outcomes = models.filter_map do |m|
         pred = m["by_fixture"][f["id"]]
-        pred && outcome(pred["home_score"], pred["away_score"])
+        next unless pred
+        f["stage"] == "group" ? outcome(pred["home_score"], pred["away_score"]) : pred["winner"]
       end.uniq
 
       if res
         score_text = transposed ? "#{res['away_score']}-#{res['home_score']}" : "#{res['home_score']}-#{res['away_score']}"
-        ft_text = "#{score_text} FT"
+        if f["stage"] != "group" && res["home_score"] == res["away_score"]
+          decided = res["decided"] == "pens" ? "pens" : "AET"
+          if decided == "pens" && res["pens"]
+            pens = transposed ? "#{res['pens']['away_score']}-#{res['pens']['home_score']}" : "#{res['pens']['home_score']}-#{res['pens']['away_score']}"
+            ft_text = "#{score_text} (#{decided} #{pens}, #{res['winner']} won)"
+          else
+            ft_text = "#{score_text} (#{decided}, #{res['winner']} won)"
+          end
+        else
+          ft_text = "#{score_text} FT"
+        end
       else
         ft_text = f["date"] || "v"
       end

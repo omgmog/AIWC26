@@ -1,12 +1,12 @@
-<div id="fixtures-by-date" hidden>
+<div id="fixtures-by-date"{% unless include.visible %} hidden{% endunless %}>
   <div class="scrollwrap">
   <table aria-label="All fixtures by date">
     <thead><tr>
       <th>Date</th><th>Fixture</th><th class="num actual">Actual</th>
-      {% for m in site.data.computed.models %}<th class="num model">{{ m.model | escape }}</th>{% endfor %}
+      {% for m in include.models %}<th class="num model">{{ m.model | escape }}</th>{% endfor %}
     </tr></thead>
     <tbody>
-    {% for f in site.data.computed.fixtures_by_date %}
+    {% for f in include.fixtures_by_date %}
       <tr id="fixture-date-{{ f.id }}">
         <td>{{ f.date }} <span style="color:var(--dim)">{{ f.time }}</span></td>
         <td>

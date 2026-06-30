@@ -1,12 +1,11 @@
 ---
 layout: default
-stage_key: r32
 ---
-{% assign stage = site.data.computed.stages[site.data.computed.current_stage] %}
-{% include archivenav.html %}
+{% assign stage = site.data.computed.stages[page.stage_key] %}
+<p><a href="{{ '/' | relative_url }}">&larr; Back to the current stage</a></p>
 
-<h2>League table — {{ stage.label }}</h2>
-{% include leaderboard.html leaderboard=stage.leaderboard %}
+<h2>{{ stage.label }} — final standings</h2>
+{% include leaderboard.html leaderboard=stage.leaderboard_through %}
 {% if stage.key == "group" %}
 <p class="legend">3 pts exact score · 1 pt correct result · 0 otherwise</p>
 {% else %}
@@ -14,8 +13,8 @@ stage_key: r32
 {% endif %}
 {% include methods.html models=stage.models %}
 
-<h2>{{ stage.label }}</h2>
-{% if stage.key == "group" %}{% include viewnav.html %}{% endif %}
+<h2>{{ stage.label }} — fixtures &amp; predictions</h2>
+{% if stage.key == "group" %}{% include viewnav.html %}{% include groupnav.html groups=stage.groups %}{% endif %}
 <p class="legend">
   <span class="p-exact">■ exact</span>
   <span class="p-result">■ {% if stage.key == "group" %}result{% else %}winner{% endif %}</span>
@@ -29,3 +28,5 @@ stage_key: r32
 {% else %}
 {% include fixtures-by-date.html fixtures_by_date=stage.fixtures_by_date models=stage.models visible=true %}
 {% endif %}
+
+{% include archivenav.html %}

@@ -1,5 +1,5 @@
 <div id="fixtures">
-{% assign grouped = site.data.computed.fixtures | group_by: "group" %}
+{% assign grouped = include.fixtures | group_by: "group" %}
 {% for grp in grouped %}
   <section class="group-section" data-group="{{ grp.name }}">
     <h2 id="group-{{ grp.name }}">Group {{ grp.name }}</h2>
@@ -7,7 +7,7 @@
     <table aria-label="Group {{ grp.name }} fixtures">
       <thead><tr>
         <th>Fixture</th><th class="num actual">Actual</th>
-        {% for m in site.data.computed.models %}<th class="num model">{{ m.model | escape }}</th>{% endfor %}
+        {% for m in include.models %}<th class="num model">{{ m.model | escape }}</th>{% endfor %}
       </tr></thead>
       <tbody>
       {% for f in grp.items %}

@@ -215,10 +215,20 @@
 <h1 class="banner">AI vs AI World Cup 2026 sweepstake</h1>
 <div class="intro">
   <p class="strap">
+    {% if page.stage_key == "group" %}
     Several large language models were handed an identical brief and asked to
     predict every group-stage scoreline before kick-off. Their answers are
     published here unedited and scored against the real results. None of them
     have seen a football.
+    {% endif %}
+    {% if page.stage_key == "r32" %}
+    Several large language models were handed an identical brief and asked to
+    predict every group-stage scoreline before kick-off; that round is done.
+    They're now predicting the knockout rounds as the bracket resolves,
+    currently the {{ site.data.computed.stages[site.data.computed.current_stage].label }}.
+    Their answers are published here unedited and scored against the real
+    results. None of them have seen a football.
+    {% endif %}
   </p>
   <aside class="next-match" id="nextMatch" aria-label="Next match">
     {% assign nm = site.data.computed.next_match %}
@@ -236,16 +246,25 @@
 {{ content }}
 
 <footer>
+  {% if page.stage_key == "group" %}
   <p>Actual scores are 90-minute results, entered manually in
   <code>_data/results.json</code> as the group stage unfolds. Predictions were
   generated on or before 10 June 2026 and are immutable. Fixture data
   compiled from the official draw and March 2026 playoff results.</p>
-  <p>Source and raw data on <a href="https://github.com/omgmog/AIWC26">GitHub</a>. Read the
-  <a href="https://blog.omgmog.net/post/five-ais-predict-the-world-cup/">writeup</a>.</p>
   <p>Some fixtures are shown here with home and away transposed against
   <code>_data/fixtures.json</code>, to match the real-world hosting arrangement.
   Predictions, scoring and the raw JSON always keep the orientation given to
   the models in the prompt.</p>
+  {% endif %}
+  {% if page.stage_key == "r32" %}
+  <p>Actual scores are 90-minute results, entered manually in
+  <code>_data/results.json</code> as each round is played. Each model's
+  predictions for a round are immutable once that round's prompt is sent, and
+  are appended to its file in <code>_data/predictions/</code> as they come in
+  — fixtures without a prediction yet show as pending.</p>
+  {% endif %}
+  <p>Source and raw data on <a href="https://github.com/omgmog/AIWC26">GitHub</a>. Read the
+  <a href="https://blog.omgmog.net/post/five-ais-predict-the-world-cup/">writeup</a>.</p>
 </footer>
 
 <script>

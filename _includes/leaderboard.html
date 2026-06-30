@@ -1,15 +1,16 @@
 <div class="scrollwrap">
   <table id="leaderboard" aria-label="Model leaderboard">
     <thead>
-      <tr><th>Model</th><th class="num">Scored</th><th class="num">Exact</th><th class="num">Result</th><th class="num">Pts</th></tr>
+      <tr><th>Model</th><th class="num">Scored</th><th class="num">Exact</th><th class="num">Winner</th><th class="num">Result</th><th class="num">Pts</th></tr>
     </thead>
     <tbody>
-    {% for t in site.data.computed.leaderboard %}
+    {% for t in include.leaderboard %}
       <tr>
         <td>{% if t.crown %}<span class="crown">★</span> {% endif %}{{ t.model.model | escape }}
             <span style="color:var(--dim)">({{ t.model.provider | escape }})</span></td>
         <td class="num">{{ t.scored }}</td>
         <td class="num">{{ t.exact }}</td>
+        <td class="num">{{ t.winner }}</td>
         <td class="num">{{ t.result }}</td>
         <td class="num pts">{{ t.pts }}</td>
       </tr>

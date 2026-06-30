@@ -1,10 +1,10 @@
 <div id="methods">
-{% for m in site.data.computed.models %}
+{% for m in include.models %}
   <details class="method">
     <summary>{{ m.model | escape }} — method</summary>
     <p>{{ m.method_notes | default: "No notes supplied." | escape }} <em>(generated {{ m.generated }})</em></p>
   </details>
 {% endfor %}
-<p class="legend">Note: Gemini's predictions were regenerated on 11 June 2026 after it
-misreported its own model version.</p>
+{% if page.stage_key == "group" %}<p class="legend">Note: Gemini's predictions were regenerated on 11 June 2026 after it
+misreported its own model version.</p>{% endif %}
 </div>

@@ -205,7 +205,8 @@
       "away": "RSA",
       "date": "2026-06-11",
       "time": "15:00",
-      "venue": "Estadio Azteca, Mexico City"
+      "venue": "Estadio Azteca, Mexico City",
+      "stage": "group"
     },
     {
       "id": "A2",
@@ -215,7 +216,8 @@
       "away": "CZE",
       "date": "2026-06-11",
       "time": "22:00",
-      "venue": "Estadio Akron, Guadalajara"
+      "venue": "Estadio Akron, Guadalajara",
+      "stage": "group"
     },
     {
       "id": "A3",
@@ -225,7 +227,8 @@
       "away": "KOR",
       "date": "2026-06-18",
       "time": "21:00",
-      "venue": "Estadio Akron, Guadalajara"
+      "venue": "Estadio Akron, Guadalajara",
+      "stage": "group"
     },
     {
       "id": "A4",
@@ -235,7 +238,8 @@
       "away": "RSA",
       "date": "2026-06-18",
       "time": "12:00",
-      "venue": "Atlanta Stadium (Mercedes-Benz)"
+      "venue": "Atlanta Stadium (Mercedes-Benz)",
+      "stage": "group"
     },
     {
       "id": "A5",
@@ -245,7 +249,8 @@
       "away": "MEX",
       "date": "2026-06-24",
       "time": "21:00",
-      "venue": "Estadio Azteca, Mexico City"
+      "venue": "Estadio Azteca, Mexico City",
+      "stage": "group"
     },
     {
       "id": "A6",
@@ -255,7 +260,8 @@
       "away": "KOR",
       "date": "2026-06-24",
       "time": "21:00",
-      "venue": "Estadio BBVA, Monterrey"
+      "venue": "Estadio BBVA, Monterrey",
+      "stage": "group"
     },
     {
       "id": "B1",
@@ -266,7 +272,8 @@
       "actual_home": "SUI",
       "date": "2026-06-24",
       "time": "15:00",
-      "venue": "BC Place, Vancouver"
+      "venue": "BC Place, Vancouver",
+      "stage": "group"
     },
     {
       "id": "B2",
@@ -277,7 +284,8 @@
       "actual_home": "BIH",
       "date": "2026-06-24",
       "time": "15:00",
-      "venue": "Seattle Stadium (Lumen Field)"
+      "venue": "Seattle Stadium (Lumen Field)",
+      "stage": "group"
     },
     {
       "id": "B3",
@@ -287,7 +295,8 @@
       "away": "QAT",
       "date": "2026-06-18",
       "time": "18:00",
-      "venue": "BC Place, Vancouver"
+      "venue": "BC Place, Vancouver",
+      "stage": "group"
     },
     {
       "id": "B4",
@@ -298,7 +307,8 @@
       "actual_home": "SUI",
       "date": "2026-06-18",
       "time": "15:00",
-      "venue": "Los Angeles Stadium (SoFi)"
+      "venue": "Los Angeles Stadium (SoFi)",
+      "stage": "group"
     },
     {
       "id": "B5",
@@ -309,7 +319,8 @@
       "actual_home": "CAN",
       "date": "2026-06-12",
       "time": "15:00",
-      "venue": "Toronto Stadium (BMO Field)"
+      "venue": "Toronto Stadium (BMO Field)",
+      "stage": "group"
     },
     {
       "id": "B6",
@@ -320,7 +331,8 @@
       "actual_home": "QAT",
       "date": "2026-06-13",
       "time": "15:00",
-      "venue": "SF Bay Area Stadium (Levi's)"
+      "venue": "SF Bay Area Stadium (Levi's)",
+      "stage": "group"
     },
     {
       "id": "C1",
@@ -330,7 +342,8 @@
       "away": "MAR",
       "date": "2026-06-13",
       "time": "18:00",
-      "venue": "New York New Jersey Stadium (MetLife)"
+      "venue": "New York New Jersey Stadium (MetLife)",
+      "stage": "group"
     },
     {
       "id": "C2",
@@ -340,7 +353,8 @@
       "away": "SCO",
       "date": "2026-06-13",
       "time": "21:00",
-      "venue": "Boston Stadium (Gillette)"
+      "venue": "Boston Stadium (Gillette)",
+      "stage": "group"
     },
     {
       "id": "C3",
@@ -350,7 +364,8 @@
       "away": "HAI",
       "date": "2026-06-19",
       "time": "20:30",
-      "venue": "Philadelphia Stadium (Lincoln Financial)"
+      "venue": "Philadelphia Stadium (Lincoln Financial)",
+      "stage": "group"
     },
     {
       "id": "C4",
@@ -360,7 +375,8 @@
       "away": "MAR",
       "date": "2026-06-19",
       "time": "18:00",
-      "venue": "Boston Stadium (Gillette)"
+      "venue": "Boston Stadium (Gillette)",
+      "stage": "group"
     },
     {
       "id": "C5",
@@ -370,7 +386,8 @@
       "away": "BRA",
       "date": "2026-06-24",
       "time": "18:00",
-      "venue": "Miami Stadium (Hard Rock)"
+      "venue": "Miami Stadium (Hard Rock)",
+      "stage": "group"
     },
     {
       "id": "C6",
@@ -380,7 +397,8 @@
       "away": "HAI",
       "date": "2026-06-24",
       "time": "18:00",
-      "venue": "Atlanta Stadium (Mercedes-Benz)"
+      "venue": "Atlanta Stadium (Mercedes-Benz)",
+      "stage": "group"
     },
     {
       "id": "D1",
@@ -390,7 +408,8 @@
       "away": "PAR",
       "date": "2026-06-12",
       "time": "21:00",
-      "venue": "Los Angeles Stadium (SoFi)"
+      "venue": "Los Angeles Stadium (SoFi)",
+      "stage": "group"
     },
     {
       "id": "D2",
@@ -400,7 +419,8 @@
       "away": "TUR",
       "date": "2026-06-14",
       "time": "00:00",
-      "venue": "BC Place, Vancouver"
+      "venue": "BC Place, Vancouver",
+      "stage": "group"
     },
     {
       "id": "D3",
@@ -410,7 +430,8 @@
       "away": "AUS",
       "date": "2026-06-19",
       "time": "15:00",
-      "venue": "Seattle Stadium (Lumen Field)"
+      "venue": "Seattle Stadium (Lumen Field)",
+      "stage": "group"
     },
     {
       "id": "D4",
@@ -420,7 +441,8 @@
       "away": "PAR",
       "date": "2026-06-19",
       "time": "23:00",
-      "venue": "SF Bay Area Stadium (Levi's)"
+      "venue": "SF Bay Area Stadium (Levi's)",
+      "stage": "group"
     },
     {
       "id": "D5",
@@ -430,7 +452,8 @@
       "away": "USA",
       "date": "2026-06-25",
       "time": "22:00",
-      "venue": "Los Angeles Stadium (SoFi)"
+      "venue": "Los Angeles Stadium (SoFi)",
+      "stage": "group"
     },
     {
       "id": "D6",
@@ -440,7 +463,8 @@
       "away": "AUS",
       "date": "2026-06-25",
       "time": "22:00",
-      "venue": "SF Bay Area Stadium (Levi's)"
+      "venue": "SF Bay Area Stadium (Levi's)",
+      "stage": "group"
     },
     {
       "id": "E1",
@@ -450,7 +474,8 @@
       "away": "CUW",
       "date": "2026-06-14",
       "time": "13:00",
-      "venue": "Houston Stadium (NRG)"
+      "venue": "Houston Stadium (NRG)",
+      "stage": "group"
     },
     {
       "id": "E2",
@@ -460,7 +485,8 @@
       "away": "ECU",
       "date": "2026-06-14",
       "time": "19:00",
-      "venue": "Philadelphia Stadium (Lincoln Financial)"
+      "venue": "Philadelphia Stadium (Lincoln Financial)",
+      "stage": "group"
     },
     {
       "id": "E3",
@@ -470,7 +496,8 @@
       "away": "CIV",
       "date": "2026-06-20",
       "time": "16:00",
-      "venue": "Toronto Stadium (BMO Field)"
+      "venue": "Toronto Stadium (BMO Field)",
+      "stage": "group"
     },
     {
       "id": "E4",
@@ -480,7 +507,8 @@
       "away": "CUW",
       "date": "2026-06-20",
       "time": "20:00",
-      "venue": "Kansas City Stadium (Arrowhead)"
+      "venue": "Kansas City Stadium (Arrowhead)",
+      "stage": "group"
     },
     {
       "id": "E5",
@@ -490,7 +518,8 @@
       "away": "GER",
       "date": "2026-06-25",
       "time": "16:00",
-      "venue": "New York New Jersey Stadium (MetLife)"
+      "venue": "New York New Jersey Stadium (MetLife)",
+      "stage": "group"
     },
     {
       "id": "E6",
@@ -500,7 +529,8 @@
       "away": "CIV",
       "date": "2026-06-25",
       "time": "16:00",
-      "venue": "Philadelphia Stadium (Lincoln Financial)"
+      "venue": "Philadelphia Stadium (Lincoln Financial)",
+      "stage": "group"
     },
     {
       "id": "F1",
@@ -510,7 +540,8 @@
       "away": "JPN",
       "date": "2026-06-14",
       "time": "16:00",
-      "venue": "Dallas Stadium (AT&T, Arlington)"
+      "venue": "Dallas Stadium (AT&T, Arlington)",
+      "stage": "group"
     },
     {
       "id": "F2",
@@ -520,7 +551,8 @@
       "away": "TUN",
       "date": "2026-06-14",
       "time": "22:00",
-      "venue": "Estadio BBVA, Monterrey"
+      "venue": "Estadio BBVA, Monterrey",
+      "stage": "group"
     },
     {
       "id": "F3",
@@ -530,7 +562,8 @@
       "away": "SWE",
       "date": "2026-06-20",
       "time": "13:00",
-      "venue": "Houston Stadium (NRG)"
+      "venue": "Houston Stadium (NRG)",
+      "stage": "group"
     },
     {
       "id": "F4",
@@ -540,7 +573,8 @@
       "away": "JPN",
       "date": "2026-06-21",
       "time": "00:00",
-      "venue": "Estadio BBVA, Monterrey"
+      "venue": "Estadio BBVA, Monterrey",
+      "stage": "group"
     },
     {
       "id": "F5",
@@ -550,7 +584,8 @@
       "away": "NED",
       "date": "2026-06-25",
       "time": "19:00",
-      "venue": "Kansas City Stadium (Arrowhead)"
+      "venue": "Kansas City Stadium (Arrowhead)",
+      "stage": "group"
     },
     {
       "id": "F6",
@@ -560,7 +595,8 @@
       "away": "SWE",
       "date": "2026-06-25",
       "time": "19:00",
-      "venue": "Dallas Stadium (AT&T)"
+      "venue": "Dallas Stadium (AT&T)",
+      "stage": "group"
     },
     {
       "id": "G1",
@@ -570,7 +606,8 @@
       "away": "EGY",
       "date": "2026-06-15",
       "time": "15:00",
-      "venue": "BC Place, Vancouver"
+      "venue": "BC Place, Vancouver",
+      "stage": "group"
     },
     {
       "id": "G2",
@@ -580,7 +617,8 @@
       "away": "NZL",
       "date": "2026-06-15",
       "time": "21:00",
-      "venue": "Los Angeles Stadium (SoFi)"
+      "venue": "Los Angeles Stadium (SoFi)",
+      "stage": "group"
     },
     {
       "id": "G3",
@@ -590,7 +628,8 @@
       "away": "IRN",
       "date": "2026-06-21",
       "time": "15:00",
-      "venue": "Los Angeles Stadium (SoFi)"
+      "venue": "Los Angeles Stadium (SoFi)",
+      "stage": "group"
     },
     {
       "id": "G4",
@@ -600,7 +639,8 @@
       "away": "EGY",
       "date": "2026-06-21",
       "time": "21:00",
-      "venue": "BC Place, Vancouver"
+      "venue": "BC Place, Vancouver",
+      "stage": "group"
     },
     {
       "id": "G5",
@@ -610,7 +650,8 @@
       "away": "BEL",
       "date": "2026-06-26",
       "time": "23:00",
-      "venue": "BC Place, Vancouver"
+      "venue": "BC Place, Vancouver",
+      "stage": "group"
     },
     {
       "id": "G6",
@@ -620,7 +661,8 @@
       "away": "IRN",
       "date": "2026-06-26",
       "time": "23:00",
-      "venue": "Seattle Stadium (Lumen Field)"
+      "venue": "Seattle Stadium (Lumen Field)",
+      "stage": "group"
     },
     {
       "id": "H1",
@@ -630,7 +672,8 @@
       "away": "CPV",
       "date": "2026-06-15",
       "time": "12:00",
-      "venue": "Atlanta Stadium (Mercedes-Benz)"
+      "venue": "Atlanta Stadium (Mercedes-Benz)",
+      "stage": "group"
     },
     {
       "id": "H2",
@@ -640,7 +683,8 @@
       "away": "URU",
       "date": "2026-06-15",
       "time": "18:00",
-      "venue": "Miami Stadium (Hard Rock)"
+      "venue": "Miami Stadium (Hard Rock)",
+      "stage": "group"
     },
     {
       "id": "H3",
@@ -650,7 +694,8 @@
       "away": "KSA",
       "date": "2026-06-21",
       "time": "12:00",
-      "venue": "Atlanta Stadium (Mercedes-Benz)"
+      "venue": "Atlanta Stadium (Mercedes-Benz)",
+      "stage": "group"
     },
     {
       "id": "H4",
@@ -660,7 +705,8 @@
       "away": "CPV",
       "date": "2026-06-21",
       "time": "18:00",
-      "venue": "Miami Stadium (Hard Rock)"
+      "venue": "Miami Stadium (Hard Rock)",
+      "stage": "group"
     },
     {
       "id": "H5",
@@ -670,7 +716,8 @@
       "away": "ESP",
       "date": "2026-06-26",
       "time": "20:00",
-      "venue": "Estadio Akron, Guadalajara"
+      "venue": "Estadio Akron, Guadalajara",
+      "stage": "group"
     },
     {
       "id": "H6",
@@ -680,7 +727,8 @@
       "away": "KSA",
       "date": "2026-06-26",
       "time": "20:00",
-      "venue": "Houston Stadium (NRG)"
+      "venue": "Houston Stadium (NRG)",
+      "stage": "group"
     },
     {
       "id": "I1",
@@ -690,7 +738,8 @@
       "away": "SEN",
       "date": "2026-06-16",
       "time": "15:00",
-      "venue": "New York New Jersey Stadium (MetLife)"
+      "venue": "New York New Jersey Stadium (MetLife)",
+      "stage": "group"
     },
     {
       "id": "I2",
@@ -700,7 +749,8 @@
       "away": "NOR",
       "date": "2026-06-16",
       "time": "18:00",
-      "venue": "Boston Stadium (Gillette)"
+      "venue": "Boston Stadium (Gillette)",
+      "stage": "group"
     },
     {
       "id": "I3",
@@ -710,7 +760,8 @@
       "away": "IRQ",
       "date": "2026-06-22",
       "time": "17:00",
-      "venue": "Philadelphia Stadium (Lincoln Financial)"
+      "venue": "Philadelphia Stadium (Lincoln Financial)",
+      "stage": "group"
     },
     {
       "id": "I4",
@@ -720,7 +771,8 @@
       "away": "SEN",
       "date": "2026-06-22",
       "time": "20:00",
-      "venue": "New York New Jersey Stadium (MetLife)"
+      "venue": "New York New Jersey Stadium (MetLife)",
+      "stage": "group"
     },
     {
       "id": "I5",
@@ -730,7 +782,8 @@
       "away": "FRA",
       "date": "2026-06-26",
       "time": "15:00",
-      "venue": "Boston Stadium (Gillette)"
+      "venue": "Boston Stadium (Gillette)",
+      "stage": "group"
     },
     {
       "id": "I6",
@@ -740,7 +793,8 @@
       "away": "IRQ",
       "date": "2026-06-26",
       "time": "15:00",
-      "venue": "Toronto Stadium (BMO Field)"
+      "venue": "Toronto Stadium (BMO Field)",
+      "stage": "group"
     },
     {
       "id": "J1",
@@ -750,7 +804,8 @@
       "away": "AUT",
       "date": "2026-06-22",
       "time": "13:00",
-      "venue": "Dallas Stadium (AT&T)"
+      "venue": "Dallas Stadium (AT&T)",
+      "stage": "group"
     },
     {
       "id": "J2",
@@ -761,7 +816,8 @@
       "actual_home": "JOR",
       "date": "2026-06-22",
       "time": "23:00",
-      "venue": "SF Bay Area Stadium (Levi's)"
+      "venue": "SF Bay Area Stadium (Levi's)",
+      "stage": "group"
     },
     {
       "id": "J3",
@@ -771,7 +827,8 @@
       "away": "ALG",
       "date": "2026-06-16",
       "time": "21:00",
-      "venue": "Kansas City Stadium (Arrowhead)"
+      "venue": "Kansas City Stadium (Arrowhead)",
+      "stage": "group"
     },
     {
       "id": "J4",
@@ -782,7 +839,8 @@
       "actual_home": "AUT",
       "date": "2026-06-17",
       "time": "00:00",
-      "venue": "SF Bay Area Stadium (Levi's)"
+      "venue": "SF Bay Area Stadium (Levi's)",
+      "stage": "group"
     },
     {
       "id": "J5",
@@ -792,7 +850,8 @@
       "away": "ARG",
       "date": "2026-06-27",
       "time": "22:00",
-      "venue": "Dallas Stadium (AT&T)"
+      "venue": "Dallas Stadium (AT&T)",
+      "stage": "group"
     },
     {
       "id": "J6",
@@ -803,7 +862,8 @@
       "actual_home": "ALG",
       "date": "2026-06-27",
       "time": "22:00",
-      "venue": "Kansas City Stadium (Arrowhead)"
+      "venue": "Kansas City Stadium (Arrowhead)",
+      "stage": "group"
     },
     {
       "id": "K1",
@@ -814,7 +874,8 @@
       "actual_home": "COL",
       "date": "2026-06-27",
       "time": "19:30",
-      "venue": "Miami Stadium (Hard Rock)"
+      "venue": "Miami Stadium (Hard Rock)",
+      "stage": "group"
     },
     {
       "id": "K2",
@@ -824,7 +885,8 @@
       "away": "UZB",
       "date": "2026-06-27",
       "time": "19:30",
-      "venue": "Atlanta Stadium (Mercedes-Benz)"
+      "venue": "Atlanta Stadium (Mercedes-Benz)",
+      "stage": "group"
     },
     {
       "id": "K3",
@@ -834,7 +896,8 @@
       "away": "COD",
       "date": "2026-06-17",
       "time": "13:00",
-      "venue": "Houston Stadium (NRG)"
+      "venue": "Houston Stadium (NRG)",
+      "stage": "group"
     },
     {
       "id": "K4",
@@ -844,7 +907,8 @@
       "away": "COL",
       "date": "2026-06-17",
       "time": "22:00",
-      "venue": "Estadio Azteca, Mexico City"
+      "venue": "Estadio Azteca, Mexico City",
+      "stage": "group"
     },
     {
       "id": "K5",
@@ -855,7 +919,8 @@
       "actual_home": "POR",
       "date": "2026-06-23",
       "time": "13:00",
-      "venue": "Houston Stadium (NRG)"
+      "venue": "Houston Stadium (NRG)",
+      "stage": "group"
     },
     {
       "id": "K6",
@@ -865,7 +930,8 @@
       "away": "COD",
       "date": "2026-06-23",
       "time": "22:00",
-      "venue": "Estadio Akron, Guadalajara"
+      "venue": "Estadio Akron, Guadalajara",
+      "stage": "group"
     },
     {
       "id": "L1",
@@ -875,7 +941,8 @@
       "away": "CRO",
       "date": "2026-06-17",
       "time": "16:00",
-      "venue": "Dallas Stadium (AT&T)"
+      "venue": "Dallas Stadium (AT&T)",
+      "stage": "group"
     },
     {
       "id": "L2",
@@ -886,7 +953,8 @@
       "actual_home": "GHA",
       "date": "2026-06-17",
       "time": "19:00",
-      "venue": "Toronto Stadium (BMO Field)"
+      "venue": "Toronto Stadium (BMO Field)",
+      "stage": "group"
     },
     {
       "id": "L3",
@@ -897,7 +965,8 @@
       "actual_home": "PAN",
       "date": "2026-06-27",
       "time": "17:00",
-      "venue": "New York New Jersey Stadium (MetLife)"
+      "venue": "New York New Jersey Stadium (MetLife)",
+      "stage": "group"
     },
     {
       "id": "L4",
@@ -908,7 +977,8 @@
       "actual_home": "CRO",
       "date": "2026-06-27",
       "time": "17:00",
-      "venue": "Philadelphia Stadium (Lincoln Financial)"
+      "venue": "Philadelphia Stadium (Lincoln Financial)",
+      "stage": "group"
     },
     {
       "id": "L5",
@@ -919,7 +989,8 @@
       "actual_home": "ENG",
       "date": "2026-06-23",
       "time": "16:00",
-      "venue": "Boston Stadium (Gillette)"
+      "venue": "Boston Stadium (Gillette)",
+      "stage": "group"
     },
     {
       "id": "L6",
@@ -930,7 +1001,198 @@
       "actual_home": "PAN",
       "date": "2026-06-23",
       "time": "19:00",
+      "venue": "Toronto Stadium (BMO Field)",
+      "stage": "group"
+    },
+    {
+      "id": "R32-1",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "GER",
+      "away": "PAR",
+      "date": "2026-06-29",
+      "time": "16:30",
+      "venue": "Boston Stadium (Gillette)"
+    },
+    {
+      "id": "R32-2",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "FRA",
+      "away": "SWE",
+      "date": "2026-06-30",
+      "time": "17:00",
+      "venue": "New York New Jersey Stadium (MetLife)"
+    },
+    {
+      "id": "R32-3",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "RSA",
+      "away": "CAN",
+      "date": "2026-06-28",
+      "time": "15:00",
+      "venue": "Los Angeles Stadium (SoFi)"
+    },
+    {
+      "id": "R32-4",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "NED",
+      "away": "MAR",
+      "date": "2026-06-29",
+      "time": "21:00",
+      "venue": "Estadio BBVA, Monterrey"
+    },
+    {
+      "id": "R32-5",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "POR",
+      "away": "CRO",
+      "date": "2026-07-02",
+      "time": "19:00",
       "venue": "Toronto Stadium (BMO Field)"
+    },
+    {
+      "id": "R32-6",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "ESP",
+      "away": "AUT",
+      "date": "2026-07-02",
+      "time": "15:00",
+      "venue": "Los Angeles Stadium (SoFi)"
+    },
+    {
+      "id": "R32-7",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "USA",
+      "away": "BIH",
+      "date": "2026-07-01",
+      "time": "20:00",
+      "venue": "SF Bay Area Stadium (Levi's)"
+    },
+    {
+      "id": "R32-8",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "BEL",
+      "away": "SEN",
+      "date": "2026-07-01",
+      "time": "16:00",
+      "venue": "Seattle Stadium (Lumen Field)"
+    },
+    {
+      "id": "R32-9",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "BRA",
+      "away": "JPN",
+      "date": "2026-06-29",
+      "time": "13:00",
+      "venue": "Houston Stadium (NRG)"
+    },
+    {
+      "id": "R32-10",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "CIV",
+      "away": "NOR",
+      "date": "2026-06-30",
+      "time": "13:00",
+      "venue": "Dallas Stadium (AT&T)"
+    },
+    {
+      "id": "R32-11",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "MEX",
+      "away": "ECU",
+      "date": "2026-06-30",
+      "time": "21:00",
+      "venue": "Estadio Azteca, Mexico City"
+    },
+    {
+      "id": "R32-12",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "ENG",
+      "away": "COD",
+      "date": "2026-07-01",
+      "time": "12:00",
+      "venue": "Atlanta Stadium (Mercedes-Benz)"
+    },
+    {
+      "id": "R32-13",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "ARG",
+      "away": "CPV",
+      "date": "2026-07-03",
+      "time": "18:00",
+      "venue": "Miami Stadium (Hard Rock)"
+    },
+    {
+      "id": "R32-14",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "AUS",
+      "away": "EGY",
+      "date": "2026-07-03",
+      "time": "14:00",
+      "venue": "Dallas Stadium (AT&T)"
+    },
+    {
+      "id": "R32-15",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "SUI",
+      "away": "ALG",
+      "date": "2026-07-02",
+      "time": "23:00",
+      "venue": "BC Place, Vancouver"
+    },
+    {
+      "id": "R32-16",
+      "group": "Last 32",
+      "stage": "r32",
+      "home": "COL",
+      "away": "GHA",
+      "date": "2026-07-03",
+      "time": "21:30",
+      "venue": "Kansas City Stadium (Arrowhead)"
+    }
+  ],
+  "stages": [
+    {
+      "key": "group",
+      "label": "Group stage"
+    },
+    {
+      "key": "r32",
+      "label": "Round of 32"
+    },
+    {
+      "key": "r16",
+      "label": "Round of 16"
+    },
+    {
+      "key": "qf",
+      "label": "Quarter-finals"
+    },
+    {
+      "key": "sf",
+      "label": "Semi-finals"
+    },
+    {
+      "key": "third",
+      "label": "Third-place play-off"
+    },
+    {
+      "key": "final",
+      "label": "Final"
     }
   ]
 }
