@@ -29,17 +29,21 @@ module AIWC26
       # The root file is optional: a model that joins mid-tournament (e.g.
       # replacing one that's no longer available) may only have stage files.
       models = manifest.map do |filename|
-        paths = [File.join(predictions_dir, filename)]
-        stage_defs.each do |stage_def|
-          next if stage_def["key"] == "group"
-          paths << File.join(predictions_dir, stage_def["key"], filename)
-        end
-        entries = paths.select { |p| File.exist?(p) }.map { |p| JSON.parse(File.read(p)) }
-        raise "no prediction files found for #{filename}" if entries.empty?
-
+        meta_by_stage = {}
         by_fixture = {}
-        entries.each { |e| e["predictions"].each { |p| by_fixture[p["fixture_id"]] = p } }
-        meta = entries.first
+
+        stage_defs.each do |stage_def|
+          key = stage_def["key"]
+          path = key == "group" ? File.join(predictions_dir, filename) : File.join(predictions_dir, key, filename)
+          next unless File.exist?(path)
+
+          entry = JSON.parse(File.read(path))
+          meta_by_stage[key] = entry
+          entry["predictions"].each { |p| by_fixture[p["fixture_id"]] = p }
+        end
+        raise "no prediction files found for #{filename}" if meta_by_stage.empty?
+
+        meta = meta_by_stage.values.first
 
         {
           "model" => meta["model"],
@@ -47,6 +51,7 @@ module AIWC26
           "generated" => meta["generated"],
           "method_notes" => meta["method_notes"],
           "by_fixture" => by_fixture,
+          "meta_by_stage" => meta_by_stage,
         }
       end
 
@@ -67,7 +72,17 @@ module AIWC26
         # model retired between rounds) so they don't show an all-dashes
         # column or sit frozen at 0pts looking like they predicted every
         # fixture wrong.
-        stage_models = models.select { |m| stage_fixtures.any? { |f| m["by_fixture"].key?(f["id"]) } }
+        stage_models = models
+          .select { |m| stage_fixtures.any? { |f| m["by_fixture"].key?(f["id"]) } }
+          .map do |m|
+            meta = m["meta_by_stage"][key]
+            meta ? m.merge(
+              "model" => meta["model"],
+              "provider" => meta["provider"],
+              "generated" => meta["generated"],
+              "method_notes" => meta["method_notes"],
+            ) : m
+          end
 
         grouped, by_date = fixture_rows(stage_models, stage_fixtures, teams, results)
 
