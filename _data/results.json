@@ -1,5 +1,5 @@
 {
-  "note": "Fill in as matches finish. Key is the fixture id from fixtures.json, e.g. \"A1\": {\"home_score\": 2, \"away_score\": 0}. Scores are the 90-minute result.",
+  "note": "Fill in as matches finish. Key is the fixture id from fixtures.json, e.g. \"A1\": {\"home_score\": 2, \"away_score\": 0}. Scores are the 90-minute result. Knockout fixtures (stage != group) also need a \"winner\" field (team code that actually progressed, however it was decided) since a draw at 90 minutes goes to extra time then penalties; add \"decided\": \"pens\" if it went to a shootout (default assumed is extra-time goals, shown as AET) when the 90-minute score is level.",
   "results": {
     "A1": {
       "home_score": 2,
