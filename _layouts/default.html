@@ -387,7 +387,7 @@
         if (candidates.length === 0) {
           nextMatchEl.innerHTML = scheduled.length === 0
             ? "<strong>NEXT UP</strong><br>Schedule TBC"
-            : "<strong>GROUP STAGE</strong><br>All matches played";
+            : "<strong>NEXT UP</strong><br>All scheduled matches played";
           delete nextMatchEl.dataset.fixtureId;
           nextMatchEl.removeAttribute("role");
           nextMatchEl.removeAttribute("tabindex");
@@ -426,8 +426,9 @@
           ? `<br><span style="color:var(--dim)">${escapeHtml(f.venue)}</span>`
           : "";
 
+        const groupLine = f.stage === "group" ? ` — GRP ${f.group}` : "";
         nextMatchEl.innerHTML =
-          `<strong>${live ? "LIVE" : "NEXT UP"} — GRP ${f.group}</strong><br>` +
+          `<strong>${live ? "LIVE" : "NEXT UP"}${groupLine}</strong><br>` +
           `<span class="when">${when}</span><br>` +
           `${homeName} <span style="color:var(--dim)">v</span> ${awayName}` +
           venueLine;
