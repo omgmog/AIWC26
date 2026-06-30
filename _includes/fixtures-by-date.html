@@ -11,7 +11,7 @@
         <td>{{ f.date }} <span style="color:var(--dim)">{{ f.time }}</span></td>
         <td>
           {% if f.disagree %}<span class="disagree" title="Models split on the result">◆</span>{% else %}<span class="disagree" style="visibility:hidden">◆</span>{% endif %}
-          <span style="color:var(--dim)">Grp {{ f.group }}</span>
+          {% if f.stage == "group" %}<span style="color:var(--dim)">Grp {{ f.group }}</span>{% endif %}
           <abbr title="{{ f.home_name | escape }}">{{ f.home_code }}</abbr> <abbr title="{{ f.venue | escape }}" style="color:var(--dim)">v</abbr> <abbr title="{{ f.away_name | escape }}">{{ f.away_code }}</abbr>
         </td>
         <td class="num actual"><span class="{{ f.ft_class }}">{{ f.ft_text }}</span></td>

@@ -248,6 +248,7 @@ module AIWC26
 
       {
         "id" => f["id"],
+        "stage" => f["stage"],
         "group" => f["group"],
         "date" => f["date"],
         "time" => f["time"],
