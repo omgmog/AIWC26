@@ -233,7 +233,7 @@
   <aside class="next-match" id="nextMatch" aria-label="Next match">
     {% assign nm = site.data.computed.next_match %}
     {% if nm %}
-      <strong>NEXT UP — GRP {{ nm.group }}</strong><br>
+      <strong>NEXT UP{% if nm.stage == "group" %} — GRP {{ nm.group }}{% endif %}</strong><br>
       <span class="when">{{ nm.when }}</span><br>
       {{ nm.home_name | escape }} <span style="color:var(--dim)">v</span> {{ nm.away_name | escape }}
       {% if nm.venue %}<br><span style="color:var(--dim)">{{ nm.venue | escape }}</span>{% endif %}

@@ -290,6 +290,7 @@ module AIWC26
       home_code, away_code = transposed ? [f["away"], f["home"]] : [f["home"], f["away"]]
 
       {
+        "stage" => f["stage"],
         "group" => f["group"],
         "when" => when_label,
         "home_name" => teams[home_code]["name"],
