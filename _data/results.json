@@ -318,6 +318,11 @@
         "home_score": 2,
         "away_score": 3
       }
+    },
+    "R32-10": {
+      "home_score": 1,
+      "away_score": 2,
+      "winner": "NOR"
     }
   }
 }

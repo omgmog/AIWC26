@@ -218,15 +218,38 @@ def cmd_sync(args):
             continue  # knockout or unknown
 
         fid = fixture["id"]
+        fifa_swapped = fifa_home != fixture["home"]
 
         # Orient scores to our fixture's home/away
-        if fifa_home == fixture["home"]:
+        if not fifa_swapped:
             home_score, away_score = fifa_home_score, fifa_away_score
         else:
             home_score, away_score = fifa_away_score, fifa_home_score
 
-        existing = results.get(fid)
         new_entry = {"home_score": home_score, "away_score": away_score}
+
+        if fixture["stage"] != "group":
+            winner_id = match.get("Winner")
+            if winner_id is not None:
+                winner_id = str(winner_id)
+                if winner_id == str(match["Home"]["IdTeam"]):
+                    new_entry["winner"] = fifa_home if not fifa_swapped else fifa_away
+                elif winner_id == str(match["Away"]["IdTeam"]):
+                    new_entry["winner"] = fifa_away if not fifa_swapped else fifa_home
+
+            if "winner" in new_entry and home_score == away_score:
+                home_pens = match.get("HomeTeamPenaltyScore")
+                away_pens = match.get("AwayTeamPenaltyScore")
+                if home_pens is not None and away_pens is not None:
+                    new_entry["decided"] = "pens"
+                    if not fifa_swapped:
+                        new_entry["pens"] = {"home_score": home_pens, "away_score": away_pens}
+                    else:
+                        new_entry["pens"] = {"home_score": away_pens, "away_score": home_pens}
+                else:
+                    new_entry["decided"] = "aet"
+
+        existing = results.get(fid)
 
         if existing == new_entry:
             skipped.append(fid)
