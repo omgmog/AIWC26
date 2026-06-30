@@ -3,6 +3,7 @@
   "predictions": [
     "ranking-bot.json",
     "claude-fable-5.json",
+    "claude-opus-4.8.json",
     "claude-sonnet-4-6.json",
     "chatgpt-gpt-5.5.json",
     "gemini-3.1-pro.json",
