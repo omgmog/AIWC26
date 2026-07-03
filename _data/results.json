@@ -358,6 +358,11 @@
       "home_score": 2,
       "away_score": 1,
       "winner": "POR"
+    },
+    "R32-15": {
+      "home_score": 2,
+      "away_score": 0,
+      "winner": "SUI"
     }
   }
 }
