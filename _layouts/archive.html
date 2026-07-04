@@ -5,7 +5,7 @@ layout: default
 <p><a href="{{ '/' | relative_url }}">&larr; Back to the current stage</a></p>
 
 <h2>{{ stage.label }} — final standings</h2>
-{% include leaderboard.html leaderboard=stage.leaderboard_through %}
+{% include leaderboard.html leaderboard=stage.leaderboard %}
 {% if stage.key == "group" %}
 <p class="legend">3 pts exact score · 1 pt correct result · 0 otherwise</p>
 {% else %}
