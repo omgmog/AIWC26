@@ -373,6 +373,11 @@
         "home_score": 2,
         "away_score": 4
       }
+    },
+    "R32-13": {
+      "home_score": 3,
+      "away_score": 2,
+      "winner": "ARG"
     }
   }
 }
