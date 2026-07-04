@@ -1,7 +1,7 @@
 {
   "model": "Ranking Bot",
   "provider": "FIFA rankings + one rule",
-  "generated": "2026-06-10",
+  "generated": "2026-07-04",
   "method_notes": "Deterministic baseline. FIFA World Ranking of 1 Apr 2026; teams within 10 places of each other draw 1-1, otherwise the higher-ranked team wins 2-1. No model, no judgement. For the winner pick, a drawn scoreline goes to the higher-ranked side.",
   "predictions": [
     {
