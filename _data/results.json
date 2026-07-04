@@ -363,6 +363,16 @@
       "home_score": 2,
       "away_score": 0,
       "winner": "SUI"
+    },
+    "R32-14": {
+      "home_score": 1,
+      "away_score": 1,
+      "winner": "EGY",
+      "decided": "pens",
+      "pens": {
+        "home_score": 2,
+        "away_score": 4
+      }
     }
   }
 }
