@@ -378,6 +378,11 @@
       "home_score": 3,
       "away_score": 2,
       "winner": "ARG"
+    },
+    "R32-16": {
+      "home_score": 1,
+      "away_score": 0,
+      "winner": "COL"
     }
   }
 }
