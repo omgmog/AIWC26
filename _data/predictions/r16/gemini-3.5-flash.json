@@ -1,0 +1,73 @@
+{
+"model": "Gemini 3.5 Flash",
+"provider": "Google",
+"generated": "2026-07-04",
+"round": "R16",
+"method_notes": "Predictions favor teams with superior tournament goal differences and clean sheets, while factoring in fatigue for teams like Paraguay and Egypt who endured penalty shootouts in the Round of 32.",
+"predictions": [
+{
+"fixture_id": "R16-1",
+"winner": "FRA",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.85,
+"reasoning": "France's lethal attack and dominant 3-0 form should comfortably bypass a fatigued Paraguay side coming off an intense penalty shootout."
+},
+{
+"fixture_id": "R16-2",
+"winner": "CAN",
+"home_score": 1,
+"away_score": 0,
+"confidence": 0.55,
+"reasoning": "Canada's strong defensive stability shown in their two consecutive clean sheets will narrowly stifle Morocco's attack."
+},
+{
+"fixture_id": "R16-3",
+"winner": "BRA",
+"home_score": 3,
+"away_score": 1,
+"confidence": 0.80,
+"reasoning": "Brazil's balanced depth and elite pedigree will expose Norway's vulnerable backline, which has conceded 8 goals so far."
+},
+{
+"fixture_id": "R16-4",
+"winner": "MEX",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.52,
+"reasoning": "Mexico's formidable defensive shape on home continent soil will drag England to extra time, where El Tri edges it."
+},
+{
+"fixture_id": "R16-5",
+"winner": "ESP",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.65,
+"reasoning": "Spain's impressive tournament record of zero goals conceded will face a stern test but ultimate victory against Iberian rivals Portugal."
+},
+{
+"fixture_id": "R16-6",
+"winner": "USA",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.58,
+"reasoning": "The United States utilizes home advantage and great defensive organization to narrowly outlast a high-scoring Belgium squad."
+},
+{
+"fixture_id": "R16-7",
+"winner": "COL",
+"home_score": 0,
+"away_score": 1,
+"confidence": 0.70,
+"reasoning": "Colombia's exceptionally stingy defense will hold firm against an Egypt side worn down by their recent marathon shootout."
+},
+{
+"fixture_id": "R16-8",
+"winner": "ARG",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.82,
+"reasoning": "Argentina's relentless attack, having already racked up 11 tournament goals, will prove too potent for Switzerland to contain."
+}
+]
+}

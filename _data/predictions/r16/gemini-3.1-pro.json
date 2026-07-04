@@ -1,0 +1,73 @@
+{
+"model": "Gemini 3.1 Pro",
+"provider": "Google",
+"generated": "2026-07-04",
+"round": "R16",
+"method_notes": "Predictions prioritize defensive solidity shown in the group and Round of 32 stages, while accounting for host advantages and extra-time fatigue from previous penalty shootouts.",
+"predictions": [
+{
+"fixture_id": "R16-1",
+"winner": "FRA",
+"home_score": 0,
+"away_score": 2,
+"confidence": 0.85,
+"reasoning": "France's high-caliber squad will comfortably progress against a fatigued Paraguay side that endured a grueling penalty shootout."
+},
+{
+"fixture_id": "R16-2",
+"winner": "MAR",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.58,
+"reasoning": "Morocco carries strong momentum after knocking out the Netherlands and will edge a closely contested battle with Canada."
+},
+{
+"fixture_id": "R16-3",
+"winner": "BRA",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.82,
+"reasoning": "Brazil's elite tournament pedigree and offensive depth will be too much for Norway's vulnerable backline."
+},
+{
+"fixture_id": "R16-4",
+"winner": "MEX",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.55,
+"reasoning": "Co-hosts Mexico leverage home advantage to progress via penalties after a intense, deadlocked 90 minutes against England."
+},
+{
+"fixture_id": "R16-5",
+"winner": "ESP",
+"home_score": 1,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "Spain's flawless defensive record continues as they narrowly shut down Portugal's attacking threats."
+},
+{
+"fixture_id": "R16-6",
+"winner": "USA",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.60,
+"reasoning": "The United States utilizes home support and superior defensive structure to exploit Belgium's tendency to concede."
+},
+{
+"fixture_id": "R16-7",
+"winner": "COL",
+"home_score": 0,
+"away_score": 1,
+"confidence": 0.70,
+"reasoning": "Colombia's disciplined defense will stifle an Egypt side drained from their previous extra-time exploits."
+},
+{
+"fixture_id": "R16-8",
+"winner": "ARG",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.75,
+"reasoning": "Argentina's formidable attacking options will break through Switzerland's organization to secure their quarter-final spot."
+}
+]
+}

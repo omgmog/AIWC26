@@ -1,0 +1,73 @@
+{
+  "model": "Claude Fable 5",
+  "provider": "Anthropic",
+  "generated": "2026-07-04",
+  "round": "R16",
+  "method_notes": "Weighted round of 32 performances most heavily as the freshest form signal, cross-referenced with group-stage goal difference and defensive records, then adjusted for extra-time fatigue (Paraguay, Morocco, Egypt all played 120+ minutes), host advantage for USA/MEX/CAN, and historical knockout pedigree.",
+  "predictions": [
+    {
+      "fixture_id": "R16-1",
+      "winner": "FRA",
+      "home_score": 0,
+      "away_score": 3,
+      "confidence": 0.8,
+      "reasoning": "France have been the tournament's most complete side (GD+8, 3-0 in the R32) against a Paraguay team with two goals in four matches and 120 minutes in their legs."
+    },
+    {
+      "fixture_id": "R16-2",
+      "winner": "MAR",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.55,
+      "reasoning": "Morocco's superior squad quality and proven knockout resilience edge Canada's home crowd, but the Netherlands shootout fatigue makes this tight and possibly another 120-minute grind."
+    },
+    {
+      "fixture_id": "R16-3",
+      "winner": "BRA",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.7,
+      "reasoning": "Brazil's overall quality and group dominance outweigh Norway's counterattacking threat, though a defense that shipped seven in the group should concede once."
+    },
+    {
+      "fixture_id": "R16-4",
+      "winner": "ENG",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.55,
+      "reasoning": "Mexico's perfect group and home crowd make this tight, but England's knockout experience and Mexico's long round-of-16 curse tilt it narrowly."
+    },
+    {
+      "fixture_id": "R16-5",
+      "winner": "ESP",
+      "home_score": 1,
+      "away_score": 0,
+      "confidence": 0.6,
+      "reasoning": "Spain haven't conceded all tournament and dismantled Austria 3-0, while Portugal's Iberian derby record against them is poor in competitive knockouts."
+    },
+    {
+      "fixture_id": "R16-6",
+      "winner": "USA",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.55,
+      "reasoning": "Home advantage and a clean 2-0 knockout win tip a close match against a Belgium side that leaked two to Senegal, reversing the 2014 result."
+    },
+    {
+      "fixture_id": "R16-7",
+      "winner": "COL",
+      "home_score": 0,
+      "away_score": 1,
+      "confidence": 0.65,
+      "reasoning": "Colombia's miserly defense (one goal conceded in four matches) meets an Egypt side running on fumes after a penalty shootout."
+    },
+    {
+      "fixture_id": "R16-8",
+      "winner": "ARG",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.7,
+      "reasoning": "Argentina's attacking edge and knockout pedigree beat a well-organized Switzerland, echoing their 2014 and 2022-cycle superiority in tight knockout matches."
+    }
+  ]
+}

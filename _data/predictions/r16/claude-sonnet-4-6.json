@@ -1,0 +1,73 @@
+{
+  "model": "claude-sonnet-4-6",
+  "provider": "Anthropic",
+  "generated": "2026-07-04",
+  "round": "R16",
+  "method_notes": "Weighted R32 performance and group stage form heavily, with secondary consideration for historical knockout pedigree and squad depth. Penalty shootout wins in R32 (Paraguay, Morocco, Egypt) noted as a mild fatigue and luck factor going into this round.",
+  "predictions": [
+    {
+      "fixture_id": "R16-1",
+      "winner": "FRA",
+      "home_score": 0,
+      "away_score": 2,
+      "confidence": 0.80,
+      "reasoning": "France were the tournament's most dominant group-stage side and thrashed Sweden 3-0 in R32; Paraguay needed penalties to survive Germany and are significantly outclassed here."
+    },
+    {
+      "fixture_id": "R16-2",
+      "winner": "CAN",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.55,
+      "reasoning": "Canada have been clinical and defensively solid; Morocco needed penalties to beat Netherlands and carry some fatigue, though their defensive organisation makes this close."
+    },
+    {
+      "fixture_id": "R16-3",
+      "winner": "BRA",
+      "home_score": 2,
+      "away_score": 0,
+      "confidence": 0.72,
+      "reasoning": "Brazil were the standout Group C side and beat Japan convincingly; Norway's goals came against weaker opposition and Brazil's quality across the pitch is a clear step up."
+    },
+    {
+      "fixture_id": "R16-4",
+      "winner": "ENG",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.60,
+      "reasoning": "England topped Group L comfortably and have superior squad depth; Mexico won their group but their R32 win over Ecuador was functional rather than convincing."
+    },
+    {
+      "fixture_id": "R16-5",
+      "winner": "ESP",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.58,
+      "reasoning": "Spain were imperious in the group stage and crushed Austria 3-0; Portugal scraped through as Group K runners-up and Spain's pressing system historically troubles them."
+    },
+    {
+      "fixture_id": "R16-6",
+      "winner": "USA",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.55,
+      "reasoning": "USA were solid throughout and beat Bosnia comfortably on home soil advantage; Belgium edged Senegal 3-2 showing defensive fragility that USA's pace can exploit."
+    },
+    {
+      "fixture_id": "R16-7",
+      "winner": "COL",
+      "home_score": 0,
+      "away_score": 1,
+      "confidence": 0.60,
+      "reasoning": "Colombia topped Group K and have been defensively miserly; Egypt needed a penalty shootout to beat Australia and their open-play threat is limited."
+    },
+    {
+      "fixture_id": "R16-8",
+      "winner": "ARG",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.68,
+      "reasoning": "Argentina were the only side with a perfect nine points and showed attacking variety; Switzerland are organised but Argentina's knockout pedigree and individual quality edges this."
+    }
+  ]
+}
