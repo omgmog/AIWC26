@@ -26,24 +26,24 @@
       "winner": "BRA",
       "home_score": 2,
       "away_score": 0,
-      "confidence": 0.72,
-      "reasoning": "Brazil were the standout Group C side and beat Japan convincingly; Norway's goals came against weaker opposition and Brazil's quality across the pitch is a clear step up."
+      "confidence": 0.73,
+      "reasoning": "Brazil were imperious in the group stage and beat Japan comfortably; Norway's goals were largely accumulated against weaker sides and Brazil's quality is a clear level above."
     },
     {
       "fixture_id": "R16-4",
       "winner": "ENG",
       "home_score": 1,
       "away_score": 2,
-      "confidence": 0.60,
-      "reasoning": "England topped Group L comfortably and have superior squad depth; Mexico won their group but their R32 win over Ecuador was functional rather than convincing."
+      "confidence": 0.61,
+      "reasoning": "England topped Group L convincingly and have the squad depth for a deep run; Mexico won their group but face a significant step up in class here."
     },
     {
       "fixture_id": "R16-5",
       "winner": "ESP",
-      "home_score": 2,
-      "away_score": 1,
-      "confidence": 0.58,
-      "reasoning": "Spain were imperious in the group stage and crushed Austria 3-0; Portugal scraped through as Group K runners-up and Spain's pressing system historically troubles them."
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.57,
+      "reasoning": "Spain's group stage was flawless and their 3-0 win over Austria showed real authority; Portugal finished second in Group K and historically struggle against Spain's pressing system."
     },
     {
       "fixture_id": "R16-6",
@@ -51,23 +51,23 @@
       "home_score": 2,
       "away_score": 1,
       "confidence": 0.55,
-      "reasoning": "USA were solid throughout and beat Bosnia comfortably on home soil advantage; Belgium edged Senegal 3-2 showing defensive fragility that USA's pace can exploit."
+      "reasoning": "USA were solid throughout and benefit from home crowd advantage; Belgium showed defensive vulnerability in edging Senegal 3-2 and USA's pace in transition can exploit that."
     },
     {
       "fixture_id": "R16-7",
-      "winner": "COL",
-      "home_score": 0,
-      "away_score": 1,
-      "confidence": 0.60,
-      "reasoning": "Colombia topped Group K and have been defensively miserly; Egypt needed a penalty shootout to beat Australia and their open-play threat is limited."
+      "winner": "ARG",
+      "home_score": 2,
+      "away_score": 0,
+      "confidence": 0.78,
+      "reasoning": "Argentina were the only side with a perfect nine points and have Argentina's formidable knockout pedigree; Egypt reached this stage via penalties and are significantly outgunned."
     },
     {
       "fixture_id": "R16-8",
-      "winner": "ARG",
+      "winner": "COL",
       "home_score": 1,
       "away_score": 2,
-      "confidence": 0.68,
-      "reasoning": "Argentina were the only side with a perfect nine points and showed attacking variety; Switzerland are organised but Argentina's knockout pedigree and individual quality edges this."
+      "confidence": 0.57,
+      "reasoning": "Colombia topped Group K with the best defensive record in the tournament and beat Ghana efficiently; Switzerland are well-organised but Colombia's attacking variety gives them the edge."
     }
   ]
 }

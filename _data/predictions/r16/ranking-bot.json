@@ -42,7 +42,7 @@
       "home_score": 1,
       "away_score": 1,
       "confidence": 0.5,
-      "reasoning": "ESP ranked 2, POR ranked 5, gap 3: draw. Tie-break: higher-ranked ESP progresses."
+      "reasoning": "POR ranked 5, ESP ranked 2, gap 3: draw. Tie-break: higher-ranked ESP progresses."
     },
     {
       "winner": "BEL",
@@ -53,20 +53,20 @@
       "reasoning": "USA ranked 16, BEL ranked 9, gap 7: draw. Tie-break: higher-ranked BEL progresses."
     },
     {
-      "winner": "COL",
+      "winner": "ARG",
       "fixture_id": "R16-7",
-      "home_score": 1,
-      "away_score": 2,
+      "home_score": 2,
+      "away_score": 1,
       "confidence": 0.5,
-      "reasoning": "EGY ranked 29, COL ranked 13, gap 16: COL win."
+      "reasoning": "ARG ranked 3, EGY ranked 29, gap 26: ARG win."
     },
     {
-      "winner": "ARG",
+      "winner": "COL",
       "fixture_id": "R16-8",
       "home_score": 1,
-      "away_score": 2,
+      "away_score": 1,
       "confidence": 0.5,
-      "reasoning": "SUI ranked 19, ARG ranked 3, gap 16: ARG win."
+      "reasoning": "SUI ranked 19, COL ranked 13, gap 6: draw. Tie-break: higher-ranked COL progresses."
     }
   ],
   "round": "R16"

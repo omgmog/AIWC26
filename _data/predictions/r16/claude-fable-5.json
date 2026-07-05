@@ -40,10 +40,10 @@
     {
       "fixture_id": "R16-5",
       "winner": "ESP",
-      "home_score": 1,
-      "away_score": 0,
+      "home_score": 0,
+      "away_score": 1,
       "confidence": 0.6,
-      "reasoning": "Spain haven't conceded all tournament and dismantled Austria 3-0, while Portugal's Iberian derby record against them is poor in competitive knockouts."
+      "reasoning": "Spain haven't conceded all tournament and dismantled Austria 3-0, and their competitive record against Portugal in knockout settings favours them in a low-scoring Iberian derby."
     },
     {
       "fixture_id": "R16-6",
@@ -55,19 +55,19 @@
     },
     {
       "fixture_id": "R16-7",
-      "winner": "COL",
-      "home_score": 0,
-      "away_score": 1,
-      "confidence": 0.65,
-      "reasoning": "Colombia's miserly defense (one goal conceded in four matches) meets an Egypt side running on fumes after a penalty shootout."
+      "winner": "ARG",
+      "home_score": 2,
+      "away_score": 0,
+      "confidence": 0.8,
+      "reasoning": "Argentina's attacking edge (GD+7) faces an Egypt side running on fumes after a penalty shootout with just five goals scored all tournament."
     },
     {
       "fixture_id": "R16-8",
-      "winner": "ARG",
-      "home_score": 1,
-      "away_score": 2,
-      "confidence": 0.7,
-      "reasoning": "Argentina's attacking edge and knockout pedigree beat a well-organized Switzerland, echoing their 2014 and 2022-cycle superiority in tight knockout matches."
+      "winner": "COL",
+      "home_score": 0,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "A coin-flip between two disciplined defensive sides, but Colombia's meaner defense (one conceded in four matches) edges a Switzerland that has faced weaker attacking opposition."
     }
   ]
 }

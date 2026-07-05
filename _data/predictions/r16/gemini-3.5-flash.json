@@ -26,48 +26,48 @@
 "winner": "BRA",
 "home_score": 3,
 "away_score": 1,
-"confidence": 0.80,
-"reasoning": "Brazil's balanced depth and elite pedigree will expose Norway's vulnerable backline, which has conceded 8 goals so far."
+"confidence": 0.82,
+"reasoning": "Brazil's depth and elite squad quality will easily breach a leaky Norway defense that has leaked eight goals so far."
 },
 {
 "fixture_id": "R16-4",
 "winner": "MEX",
 "home_score": 1,
 "away_score": 1,
-"confidence": 0.52,
-"reasoning": "Mexico's formidable defensive shape on home continent soil will drag England to extra time, where El Tri edges it."
+"confidence": 0.54,
+"reasoning": "Mexico's home-continent crowd and unbreached defense will force extra time against England, where El Tri edges out a win."
 },
 {
 "fixture_id": "R16-5",
 "winner": "ESP",
-"home_score": 2,
-"away_score": 1,
+"home_score": 1,
+"away_score": 2,
 "confidence": 0.65,
-"reasoning": "Spain's impressive tournament record of zero goals conceded will face a stern test but ultimate victory against Iberian rivals Portugal."
+"reasoning": "Spain's immaculate defensive record gives them a slight tactical edge over Portugal in a highly competitive Iberian derby."
 },
 {
 "fixture_id": "R16-6",
 "winner": "USA",
 "home_score": 2,
 "away_score": 1,
-"confidence": 0.58,
-"reasoning": "The United States utilizes home advantage and great defensive organization to narrowly outlast a high-scoring Belgium squad."
+"confidence": 0.60,
+"reasoning": "Home advantage and robust team defensive chemistry carry the United States past a talented but leaky Belgium side."
 },
 {
 "fixture_id": "R16-7",
-"winner": "COL",
-"home_score": 0,
-"away_score": 1,
-"confidence": 0.70,
-"reasoning": "Colombia's exceptionally stingy defense will hold firm against an Egypt side worn down by their recent marathon shootout."
+"winner": "ARG",
+"home_score": 3,
+"away_score": 0,
+"confidence": 0.88,
+"reasoning": "Argentina's lethal attacking unit will dominate an exhausted Egypt side coming off a grueling penalty shootout."
 },
 {
 "fixture_id": "R16-8",
-"winner": "ARG",
-"home_score": 2,
-"away_score": 0,
-"confidence": 0.82,
-"reasoning": "Argentina's relentless attack, having already racked up 11 tournament goals, will prove too potent for Switzerland to contain."
+"winner": "COL",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.58,
+"reasoning": "Colombia's rigid defensive structure drags Switzerland into extra time, where the South Americans prevail on stamina."
 }
 ]
 }
