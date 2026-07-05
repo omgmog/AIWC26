@@ -1,0 +1,65 @@
+{
+  "model": "Human 1.0",
+  "provider": "One football fan",
+  "generated": "2026-07-04",
+  "method_notes": "Picks received by the maintainer roughly 20 minutes after the opening match kicked off; the entrant states they were written before kickoff and the maintainer accepts that, so A1 is included and scored. Every other fixture predates its kickoff unambiguously. Expects more draws than the robots.",
+  "predictions": [
+    {
+      "winner": "FRA",
+      "fixture_id": "R16-1",
+      "home_score": 0,
+      "away_score": 3,
+      "confidence": 0.5
+    },
+    {
+      "winner": "MAR",
+      "fixture_id": "R16-2",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5
+    },
+    {
+      "winner": "NOR",
+      "fixture_id": "R16-3",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5
+    },
+    {
+      "winner": "ENG",
+      "fixture_id": "R16-4",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5
+    },
+    {
+      "winner": "ESP",
+      "fixture_id": "R16-5",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5
+    },
+    {
+      "winner": "USA",
+      "fixture_id": "R16-6",
+      "home_score": 2,
+      "away_score": 0,
+      "confidence": 0.5
+    },
+    {
+      "winner": "ARG",
+      "fixture_id": "R16-7",
+      "home_score": 3,
+      "away_score": 1,
+      "confidence": 0.5
+    },
+    {
+      "winner": "SUI",
+      "fixture_id": "R16-8",
+      "home_score": 1,
+      "away_score": 0,
+      "confidence": 0.5
+    }
+  ],
+  "round": "R16"
+}
