@@ -1,5 +1,5 @@
 {
-  "model": "claude-sonnet-4-6",
+  "model": "Claude Sonnet 4.6",
   "provider": "Anthropic",
   "generated": "2026-07-04",
   "round": "R16",
