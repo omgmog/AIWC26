@@ -418,6 +418,16 @@
       "home_score": 3,
       "away_score": 2,
       "winner": "ARG"
+    },
+    "R16-8": {
+      "home_score": 0,
+      "away_score": 0,
+      "winner": "SUI",
+      "decided": "pens",
+      "pens": {
+        "home_score": 4,
+        "away_score": 3
+      }
     }
   }
 }
