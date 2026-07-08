@@ -1,0 +1,41 @@
+{
+  "model": "Claude Sonnet 4.6",
+  "provider": "Anthropic",
+  "generated": "2026-07-08",
+  "round": "QF",
+  "method_notes": "Weighted recent tournament form heavily, particularly knockout-round results and margin of victory. Also considered historical pedigree, squad fatigue across five matches, and head-to-head patterns where relevant.",
+  "predictions": [
+    {
+      "fixture_id": "QF-1",
+      "winner": "FRA",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.68,
+      "reasoning": "France have been dominant all tournament (9pts, +8 GD in group, beat Paraguay comfortably in R16) and Morocco, while impressive in beating Netherlands on penalties, have been less convincing in open play."
+    },
+    {
+      "fixture_id": "QF-2",
+      "winner": "ESP",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.62,
+      "reasoning": "Spain are the only team in the tournament yet to concede a goal and dismantled Portugal 1-0 in the R16, while Belgium have been leaky (conceded in both knockout games); Spain's defensive solidity should be decisive."
+    },
+    {
+      "fixture_id": "QF-3",
+      "winner": "ENG",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.55,
+      "reasoning": "Norway's upset of Brazil is credible but England have been consistent throughout and have more knockout-round pedigree; a close game but England's squad depth edges it."
+    },
+    {
+      "fixture_id": "QF-4",
+      "winner": "ARG",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.65,
+      "reasoning": "Argentina have been the tournament's most prolific side and Switzerland, though resilient, scraped through on penalties against Colombia; Argentina's attacking quality should prove too much."
+    }
+  ]
+}

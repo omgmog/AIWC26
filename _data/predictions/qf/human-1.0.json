@@ -1,0 +1,41 @@
+{
+  "model": "Human 1.0",
+  "provider": "One football fan",
+  "generated": "2026-07-08",
+  "round": "QF",
+  "method_notes": "Picks made after seeing the full group stage; no separate prediction made for extra time or penalties, just the 90-minute winner and score.",
+  "predictions": [
+    {
+      "fixture_id": "QF-1",
+      "winner": "FRA",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": ""
+    },
+    {
+      "fixture_id": "QF-2",
+      "winner": "ESP",
+      "home_score": 1,
+      "away_score": 0,
+      "confidence": 0.5,
+      "reasoning": ""
+    },
+    {
+      "fixture_id": "QF-3",
+      "winner": "ENG",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": ""
+    },
+    {
+      "fixture_id": "QF-4",
+      "winner": "ARG",
+      "home_score": 2,
+      "away_score": 0,
+      "confidence": 0.5,
+      "reasoning": ""
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+"model": "Gemini 3.1 Pro",
+"provider": "Google",
+"generated": "2026-07-08",
+"round": "QF",
+"method_notes": "Weighted recent knockout stage form heavily, favoring teams with strong defensive records like Spain and France, while considering Argentina and England's superior attacking depth despite recent defensive vulnerabilities.",
+"predictions": [
+{
+"fixture_id": "QF-1",
+"winner": "FRA",
+"home_score": 2,
+"away_score": 0,
+"confidence": 0.8,
+"reasoning": "France has maintained consecutive clean sheets in the knockouts and possesses superior depth against a resilient but overachieving Moroccan side."
+},
+{
+"fixture_id": "QF-2",
+"winner": "ESP",
+"home_score": 1,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "Spain has a flawless defensive record with zero goals conceded all tournament, giving them a narrow edge over a potent Belgian attack."
+},
+{
+"fixture_id": "QF-3",
+"winner": "ENG",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.6,
+"reasoning": "Norway has been an impressive giant-killer, but England's deeper bench and major tournament experience should help them edge out a high-intensity matchup."
+},
+{
+"fixture_id": "QF-4",
+"winner": "ARG",
+"home_score": 2,
+"away_score": 1,
+"confidence": 0.7,
+"reasoning": "Despite Argentina conceding four goals across their two knockout matches, their prolific attack should ultimately break down Switzerland's structured defense."
+}
+]
+}

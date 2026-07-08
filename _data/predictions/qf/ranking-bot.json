@@ -1,0 +1,41 @@
+{
+  "model": "Ranking Bot",
+  "provider": "FIFA rankings + one rule",
+  "generated": "2026-06-10",
+  "method_notes": "Deterministic baseline. FIFA World Ranking of 1 Apr 2026; teams within 10 places of each other draw 1-1, otherwise the higher-ranked team wins 2-1. No model, no judgement. For the winner pick, a drawn scoreline goes to the higher-ranked side.",
+  "predictions": [
+    {
+      "winner": "FRA",
+      "fixture_id": "QF-1",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "FRA ranked 1, MAR ranked 8, gap 7: draw. Tie-break: higher-ranked FRA progresses."
+    },
+    {
+      "winner": "ESP",
+      "fixture_id": "QF-2",
+      "home_score": 1,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ESP ranked 2, BEL ranked 9, gap 7: draw. Tie-break: higher-ranked ESP progresses."
+    },
+    {
+      "winner": "ENG",
+      "fixture_id": "QF-3",
+      "home_score": 1,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": "NOR ranked 31, ENG ranked 4, gap 27: ENG win."
+    },
+    {
+      "winner": "ARG",
+      "fixture_id": "QF-4",
+      "home_score": 2,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": "ARG ranked 3, SUI ranked 19, gap 16: ARG win."
+    }
+  ],
+  "round": "QF"
+}
