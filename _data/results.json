@@ -438,6 +438,11 @@
       "home_score": 2,
       "away_score": 1,
       "winner": "ESP"
+    },
+    "QF-3": {
+      "home_score": 1,
+      "away_score": 2,
+      "winner": "ENG"
     }
   }
 }
