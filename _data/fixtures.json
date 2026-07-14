@@ -1188,8 +1188,13 @@
 {"id": "QF-3", "group": "Quarter-finals", "stage": "qf", "home": "NOR", "away": "ENG",
  "date": "2026-07-11", "time": "17:00", "venue": "Miami Stadium (Hard Rock)"},
 {"id": "QF-4", "group": "Quarter-finals", "stage": "qf", "home": "ARG", "away": "SUI",
- "date": "2026-07-11", "time": "21:00", "venue": "Kansas City Stadium (Arrowhead)"}
-    
+ "date": "2026-07-11", "time": "21:00", "venue": "Kansas City Stadium (Arrowhead)"},
+
+{"id": "SF-1", "group": "Semi-finals", "stage": "sf", "home": "FRA", "away": "ESP",
+ "date": "2026-07-14", "time": "15:00", "venue": "Dallas Stadium (AT&T)"},
+{"id": "SF-2", "group": "Semi-finals", "stage": "sf", "home": "ENG", "away": "ARG",
+ "date": "2026-07-15", "time": "15:00", "venue": "Atlanta Stadium (Mercedes-Benz)"}
+
   ],
   "stages": [
     {

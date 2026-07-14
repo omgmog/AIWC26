@@ -1,0 +1,25 @@
+{
+  "model": "Human 1.0",
+  "provider": "One football fan",
+  "generated": "2026-07-14",
+  "round": "SF",
+  "method_notes": "Picks made after seeing the quarter-final results; no separate prediction made for extra time or penalties, just the 90-minute winner and score.",
+  "predictions": [
+    {
+      "fixture_id": "SF-1",
+      "winner": "ESP",
+      "home_score": 0,
+      "away_score": 1,
+      "confidence": 0.5,
+      "reasoning": ""
+    },
+    {
+      "fixture_id": "SF-2",
+      "winner": "ENG",
+      "home_score": 3,
+      "away_score": 2,
+      "confidence": 0.5,
+      "reasoning": ""
+    }
+  ]
+}

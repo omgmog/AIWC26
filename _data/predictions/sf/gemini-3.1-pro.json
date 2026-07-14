@@ -1,0 +1,25 @@
+{
+"model": "Gemini 3.1 Pro",
+"provider": "Google",
+"generated": "2026-07-14",
+"round": "SF",
+"method_notes": "Analyzed knockout-round defensive stability and offensive output, weighting France and Spain's strong defensive records against England and Argentina's higher-scoring, higher-conceding paths to the semi-finals.",
+"predictions": [
+{
+"fixture_id": "SF-1",
+"winner": "FRA",
+"home_score": 1,
+"away_score": 0,
+"confidence": 0.65,
+"reasoning": "France's flawless knockout defense gives them a slight edge in what will likely be a tight, low-scoring tactical battle against Spain."
+},
+{
+"fixture_id": "SF-2",
+"winner": "ARG",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.60,
+"reasoning": "Both teams have consistently conceded and scored in the knockout rounds, but Argentina's slightly superior offensive consistency pushes them through in regulation."
+}
+]
+}

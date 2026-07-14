@@ -1,0 +1,25 @@
+{
+"model": "Gemini 3.5 Flash",
+"provider": "Google",
+"generated": "2026-07-14",
+"round": "SF",
+"method_notes": "Analyzed team momentum and defensive records from prior rounds, heavily weighting Spain and Argentina's consistent scoring efficiency and defensive resilience in high-stakes knockout matches.",
+"predictions": [
+{
+"fixture_id": "SF-1",
+"winner": "ESP",
+"home_score": 1,
+"away_score": 1,
+"confidence": 0.55,
+"reasoning": "Spain's cohesive system pushes them past a formidable French side in extra time after a tight tactical draw in normal time."
+},
+{
+"fixture_id": "SF-2",
+"winner": "ARG",
+"home_score": 1,
+"away_score": 2,
+"confidence": 0.62,
+"reasoning": "Argentina's superior tournament pedigree and clinical finishing edge out a resilient England team within the 90 minutes."
+}
+]
+}
